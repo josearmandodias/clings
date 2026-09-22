@@ -1,6 +1,6 @@
 # clings
 
-[![check](https://github.com/josearmandodias/clings/actions/workflows/check.yml/badge.svg)](https://github.com/josearmandodias/clings/actions/workflows/check.yml)
+[![check](https://github.com/josearmandodias/clings/actions/workflows/check.yml/badge.svg)](https://github.com/josearmandodias/clings/actions/workflows/check.yml) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.en.md)
 
 [Français](README.md) · **English**
 
@@ -132,6 +132,19 @@ For each exercise it checks that the statement, the hint, the solution and the
 blank copy exist, that **the solution compiles and passes**, and that **the
 statement, with the marker removed, fails** (otherwise the exercise would
 already be solved). Run it after adding or modifying an exercise.
+
+## Contributing
+
+Contributions are welcome: a new exercise, a clearer wording for an ambiguous
+one, a better hint, a cheat sheet, or an improvement to the harness.
+
+- Open an *issue* to report an unclear exercise or a bug.
+- Open a *pull request* to propose a change: CI runs `dev/check.sh` on macOS
+  and Ubuntu and tells you whether everything holds.
+- The step-by-step guide (anatomy of an exercise, golden rules, the templates
+  trap, style) is in [`CONTRIBUTING.en.md`](CONTRIBUTING.en.md).
+
+An ambiguous exercise or a misleading hint is a real bug: don't hesitate.
 
 ## License
 
