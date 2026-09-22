@@ -1,6 +1,6 @@
 # clings
 
-[![check](https://github.com/josearmandodias/clings/actions/workflows/check.yml/badge.svg)](https://github.com/josearmandodias/clings/actions/workflows/check.yml)
+[![check](https://github.com/josearmandodias/clings/actions/workflows/check.yml/badge.svg)](https://github.com/josearmandodias/clings/actions/workflows/check.yml) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 **Français** · [English](README.en.md)
 
@@ -133,6 +133,19 @@ Pour chaque exercice il vérifie que l'énoncé, l'indice, la solution et la cop
 vierge existent, que **la solution compile et passe**, et que **l'énoncé,
 marqueur retiré, échoue** (sinon l'exercice serait déjà résolu). Lance-le après
 avoir ajouté ou modifié un exercice.
+
+## Contribuer
+
+Les contributions sont bienvenues : un nouvel exercice, un énoncé ambigu à
+corriger, un meilleur indice, une fiche, ou une amélioration du harnais.
+
+- Ouvre une *issue* pour signaler un exercice peu clair ou un bug.
+- Ouvre une *pull request* pour proposer un changement : la CI lance
+  `dev/check.sh` sur macOS et Ubuntu et te dit si tout tient.
+- Le pas-à-pas (anatomie d'un exercice, règles d'or, piège des templates,
+  style) est dans [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
+Un énoncé ambigu ou un indice trompeur est un vrai bug : n'hésite pas.
 
 ## Licence
 
