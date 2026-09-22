@@ -1,0 +1,13 @@
+Le fichier a corriger est exercises/07_modules/modules1_math.h, pas le .c.
+
+Il lui manque :
+  1. les gardes d'inclusion, qui empechent le contenu d'etre insere deux
+     fois si deux fichiers incluent le meme header :
+       #ifndef MODULES1_MATH_H
+       #define MODULES1_MATH_H
+       ... les declarations ...
+       #endif
+  2. les prototypes de cube() et compteur_appels(), sur le modele de carre().
+
+Un prototype se termine par un point-virgule : c'est une promesse faite au
+compilateur, l'implementation vit dans le .c.

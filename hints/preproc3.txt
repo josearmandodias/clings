@@ -1,0 +1,10 @@
+`##` colle deux jetons adjacents en un seul, sans espace :
+
+  #define CONCAT(a, b) a##b
+
+  CONCAT(2, 3)              -> 23
+  CONCAT(mon_petit_, test)  -> mon_petit_test
+
+Une fois les deux morceaux colles, le resultat est un jeton normal, que le
+compilateur lit comme un nombre ou un identifiant. C'est cette astuce qui
+permet de fabriquer des noms de fonctions ou de variables.

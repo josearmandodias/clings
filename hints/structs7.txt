@@ -1,0 +1,10 @@
+Lis l'etiquette avant de lire la valeur :
+
+  if (n->type == ENTIER)
+      return (double)n->valeur.i;
+  return n->valeur.d;
+
+Une union ne stocke qu'un membre a la fois : seul le membre designe par
+l'etiquette est valide, l'autre contient des octets qui n'ont pas de sens.
+
+Le cast `(double)` est explicite, meme s'il serait implicite ici.

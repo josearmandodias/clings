@@ -1,0 +1,9 @@
+Trouve d'abord la longueur utile de dst (bornee par taille) :
+  tant que dl < taille et dst[dl] != '\0', dl++.
+La longueur totale voulue est dl + strlen(src).
+
+Pour l'ajout, il reste taille - dl - 1 octets utiles : copie au plus autant
+de caracteres de src, puis termine par '\0'. Si dl == taille, il n'y a plus
+de place : on ne touche pas dst.
+
+Cas taille == 0 : dl vaut 0 et on renvoie strlen(src).

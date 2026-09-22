@@ -1,0 +1,6 @@
+Compare les deux extremites, puis rappelle-toi sur l'interieur :
+  - fin - debut <= 1 -> 1 (chaine vide ou d'un seul caractere) ;
+  - s[debut] != s[fin - 1] -> 0 ;
+  - sinon est_palindrome_rec(s, debut + 1, fin - 1).
+
+Attention : `fin` est exclu, le dernier caractere est donc s[fin - 1].

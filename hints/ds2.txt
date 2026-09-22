@@ -1,0 +1,8 @@
+file_push : refuse si taille == CAP (renvoie 0). La prochaine case libre est a
+l'indice (tete + taille) % CAP : ecris-la, taille++, renvoie 1.
+
+file_pop : refuse si taille == 0. Lis data[tete], avance tete avec
+(tete + 1) % CAP, taille--, renvoie 1.
+
+Le modulo est ce qui fait "boucler" les indices quand on revient au debut du
+tableau. `tete` n'est jamais remis a 0 : il tourne.

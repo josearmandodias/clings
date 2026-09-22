@@ -1,0 +1,7 @@
+ma_strlen : garde l'adresse de depart, avance tant que *s n'est pas '\0',
+renvoie la difference des deux pointeurs.
+
+ma_strcpy : garde dst pour le retour, puis copie caractere par caractere.
+L'idiome classique copie le '\0' et s'arrete dessus :
+  while ((*dst++ = *src++) != '\0') ;
+Ecris-le d'abord avec une boucle explicite si celui-ci te parait obscur.

@@ -1,0 +1,13 @@
+`#` est l'operateur de "stringification". Il precede directement le nom du
+parametre et ne s'applique qu'a un argument de macro :
+
+  #define STR(x) #x
+
+Pour XSTR, une macro n'en developpe pas une autre quand l'argument est
+stringifie. La parade est une macro en deux etages :
+
+  #define STR(x) #x
+  #define XSTR(x) STR(x)
+
+Ainsi XSTR(VERSION) remplace d'abord VERSION par 3, puis STR(3) produit "3".
+Lis XSTR(VERSION) de l'interieur vers l'exterieur.

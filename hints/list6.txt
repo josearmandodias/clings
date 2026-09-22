@@ -1,0 +1,9 @@
+Astuce du noeud factice : cree un Noeud local (pas alloue) qui sert de depart.
+`queue` pointe dessus.
+Tant que a et b sont non NULL, accroche a queue->suivant celui des deux qui a
+la plus petite valeur, puis fais avancer ce pointeur et queue.
+Quand l'un est epuise, accroche le reste de l'autre : queue->suivant = a ? a : b.
+La tete est factice.suivant.
+
+Aucune allocation : tu ne fais que relier des noeuds existants. Une fois
+fusionnees, les deux listes ne forment qu'une seule chaine a liberer.

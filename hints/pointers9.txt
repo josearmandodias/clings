@@ -1,0 +1,15 @@
+`void *` ne dit ni le type ni la taille : c'est le paramètre `taille` qui
+donne le nombre d'octets à échanger. Traite la mémoire comme une suite
+d'octets (`unsigned char`).
+
+Version octet par octet :
+  unsigned char *pa = a, *pb = b;
+  for (size_t i = 0; i < taille; i++) {
+      unsigned char tmp = pa[i];
+      pa[i] = pb[i];
+      pb[i] = tmp;
+  }
+
+On peut aussi faire `memcpy` du premier vers un tampon, puis le second vers le
+premier, puis le tampon vers le second. N'utilise PAS deux `memcpy` en
+chevauchement sans tampon : ASan signale `memcpy-param-overlap`.

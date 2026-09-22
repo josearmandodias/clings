@@ -1,0 +1,12 @@
+Parcourt le tableau et compare les chaines avec strcmp :
+
+  for (size_t i = 0; i < n; i++)
+      if (strcmp(gens[i].nom, nom) == 0)
+          return (int)i;
+  return -1;
+
+-strcmp renvoie 0 quand les chaines sont egales ; ne teste pas `gens[i].nom ==
+nom`, qui compare des adresses, pas des contenus.
+- Avec n == 0, la boucle ne s'execute pas : la fonction renvoie deja -1.
+- L'index est un size_t, la fonction renvoie un int : un cast explicite evite
+  toute surprise.

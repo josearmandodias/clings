@@ -1,0 +1,7 @@
+  - Alloue un tableau de `max + 1` compteurs avec calloc (deja a zero).
+  - Pour chaque element, incremente compte[tab[i]].
+  - Reparcours les valeurs v de 0 a max et reecris tab avec autant de `v`
+    que compte[v] l'indique.
+  - Libere le tableau de comptage.
+
+Si n == 0 : renvoie tout de suite, sans rien allouer.

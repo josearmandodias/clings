@@ -1,0 +1,9 @@
+Le tableau de test est déclaré `static const char *const[]` : chaque case est
+un pointeur constant. Passer son nom à un paramètre `const char **` demanderait
+de jeter le `const` du milieu — ce que le compilateur interdit.
+
+Écris le paramètre `const char *const *mots`. Une fois cela fait, `mots[i]` est
+un `const char *`, parfait pour `strlen`.
+
+IMPORTANT : `const` doit être à la fois sur le caractère ET sur le pointeur du
+milieu (`*const`), pas seulement sur le début ou la fin.

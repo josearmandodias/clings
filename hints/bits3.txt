@@ -1,0 +1,5 @@
+Boucle sur i de 0 a 31 (poids fort d'abord). Le bit a afficher est
+(x >> (31 - i)) & 1u : ecris '1' ou '0' selon le resultat. Termine la chaine par
+sortie[32] = '\0'.
+
+Pense a respecter `taille` : n'ecris jamais plus de taille - 1 caracteres.

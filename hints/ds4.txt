@@ -1,0 +1,7 @@
+Pense "pointeur vers le lien" : un Noeud **lien = &tete. Avance tant que
+*lien != NULL et (*lien)->valeur != v, en faisant lien = &(*lien)->suivant.
+
+Quand tu t'arrete, *lien designe le noeud a retirer (ou NULL s'il est absent).
+Sauvegarde-le, fais *lien = cible->suivant, puis free(cible). Renvoie tete.
+
+Cette approche traite la tete comme les autres cas, sans if special.

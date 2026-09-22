@@ -1,0 +1,3 @@
+  a_permission : (perms & flag) != 0
+  ajouter      : perms | flag
+  retirer      : perms & ~flag

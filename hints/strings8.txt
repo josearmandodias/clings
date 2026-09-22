@@ -1,0 +1,2 @@
+Calcule n = strlen(s). Echange s[i] et s[n-1-i] pour i allant de 0 a n/2
+(exclu). Le '\0' reste ou il est, a l'indice n : on ne le deplace pas.

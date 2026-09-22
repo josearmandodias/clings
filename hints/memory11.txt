@@ -1,0 +1,9 @@
+Le probleme n'est pas l'allocation, c'est que certaines sorties l'oublient.
+
+Deux strategies :
+
+  - sortie unique : calculer le resultat dans une variable, puis un seul
+    `free(copie); return resultat;` a la fin ;
+  - ou bien : `free(copie);` juste avant CHAQUE `return` qui suit l'allocation.
+
+Verifie aussi le chemin `copie == NULL` : la, il n'y a rien a liberer.

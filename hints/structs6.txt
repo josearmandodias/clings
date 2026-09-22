@@ -1,0 +1,7 @@
+Regroupe les champs par taille decroissante : le plus gros (le `int`) en
+premier, puis les deux `char` cote a cote.
+
+  int b; char a; char c;   -> 4 + 1 + 1 + 2 de padding = 8
+
+Si tu laisses un `char` seul en tete ou en queue, tu ouvres 3 octets de trou
+de chaque cote du `int` et tu retombes sur 12.

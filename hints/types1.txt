@@ -1,0 +1,8 @@
+Un specificateur par type, il n'y a rien a deviner :
+  int    -> %d
+  long   -> %ld
+  size_t -> %zu   (le z veut dire "de la taille d'un size_t")
+  double -> %f
+
+Le compilateur verifie la correspondance grace a -Wformat (inclus dans -Wall).
+C'est une des rares choses qu'il verifie pour toi en C : ecoute-le.

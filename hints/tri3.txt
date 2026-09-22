@@ -1,0 +1,8 @@
+Partition de Lomuto sur [debut, fin), dernier element comme pivot :
+  - parcours j de debut a fin-2 ; si tab[j] <= pivot, echange tab[j] avec
+    tab[i] et avance i ;
+  - a la fin, echange tab[i] avec le pivot ; renvoie i.
+
+`trier` trie ensuite [debut, pivot) et [pivot + 1, fin). Cas de base : moins
+de 2 elements. Compare avec `j + 1 < fin` pour eviter le debordement sur un
+size_t.

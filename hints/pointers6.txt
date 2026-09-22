@@ -1,0 +1,11 @@
+Le paramètre `int **out` est l'adresse d'un pointeur de l'appelant. Écrire
+`*out = p` range l'adresse allouée dans le pointeur de `main`.
+
+Ordre des vérifications :
+  1. `if (out == NULL) return 0;` — teste le pointeur AVANT de le déréférencer,
+     sinon appel avec NULL = plantage.
+  2. `int *p = malloc(sizeof *p); if (p == NULL) return 0;`
+  3. `*p = valeur;` puis `*out = p;` et `return 1;`.
+
+Le test appelle `creer_int(NULL, 7)` : sans l'étape 1, c'est un déréférencement
+de pointeur nul.

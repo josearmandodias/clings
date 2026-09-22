@@ -1,0 +1,6 @@
+Avance tant que *a == *b et que *a != '\0'. A la sortie, la difference des
+deux caracteres courants donne le signe :
+  (int)(unsigned char)*a - (int)(unsigned char)*b
+
+Compare en unsigned char : sur les plateformes ou char est signe, c'est la
+comparaison conforme a la norme.

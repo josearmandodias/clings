@@ -1,0 +1,7 @@
+Trois choses a faire dans l'ordre :
+  1. si v <= 0, renvoyer 0 immediatement, sans toucher a *out ;
+  2. sinon, ecrire dans *out — mais seulement si out n'est pas NULL ;
+  3. renvoyer 1.
+
+Le test `if (out != NULL)` n'est pas de la paranoia : le dernier appel du
+test passe justement NULL.

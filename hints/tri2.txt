@@ -1,0 +1,8 @@
+Ecrit deux fonctions auxiliaires :
+  - `fusion` : fusionne deux moities deja triees dans le tampon, puis
+    recopie le resultat dans tab ;
+  - `trier(tab, tmp, debut, fin)` : coupe en deux (milieu), trie chaque
+    moitie, puis fusionne.
+
+Alloue `tmp` UNE seule fois dans tri_fusion (malloc(n * sizeof *tmp)),
+transmets-le aux appels recursifs, et libere-le a la fin. Si n < 2 : rien.

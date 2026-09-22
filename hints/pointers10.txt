@@ -1,0 +1,11 @@
+Le test compare des ADRESSES : `chercher(tab, 6, 15) == &tab[2]`. Renvoyer
+`&tab[i]` (pas `tab[i]`) est donc essentiel, et il faut renvoyer la première
+occurrence.
+
+Parcours avec un indice et arrête-toi dès que ça correspond :
+
+  for (size_t i = 0; i < n; i++)
+      if (tab[i] == valeur) return &tab[i];
+  return NULL;
+
+Quand `n == 0`, la boucle ne tourne pas et on tombe sur `return NULL`.

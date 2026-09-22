@@ -1,0 +1,5 @@
+Deux boucles imbriquees, et une seule ligne dedans :
+  sortie[j][i] = entree[i][j];
+
+i parcourt les L lignes, j les C colonnes. Transposer, c'est echanger les
+deux indices — rien de plus.

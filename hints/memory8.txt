@@ -1,0 +1,13 @@
+Le piege classique :
+
+  tab = realloc(tab, ...)     /* interdit : si realloc echoue, tab est perdu */
+
+Passe par un temporaire :
+
+  int *tmp = realloc(tab, nouveau * sizeof(*tmp));
+  if (tmp == NULL)
+      return NULL;            /* `tab` reste valide, on ne le libere pas */
+  return tmp;
+
+realloc recopie deja les `ancien` premieres valeurs : inutile de les copier
+a la main. Le parametre `ancien` sert seulement a documenter le contrat.

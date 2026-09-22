@@ -1,0 +1,5 @@
+deplacer recoit une COPIE de la struct : ses modifications sont perdues.
+Prends un `Point *p` et ecris `p->x += dx;`.
+
+norme_carree ne modifie rien : prends un `const Point *p`.
+Le pointeur evite aussi la copie, ce qui compte des que la struct grossit.

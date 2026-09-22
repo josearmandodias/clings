@@ -1,0 +1,5 @@
+Deux operateurs, inverses l'un de l'autre :
+  &x   donne l'adresse de x        -> a mettre dans p
+  *p   donne la valeur a l'adresse p -> a affecter pour ecrire dans x
+
+Donc : int *p = &x;  puis  *p = 42;

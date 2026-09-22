@@ -1,0 +1,10 @@
+Le paramètre `int (*f)(int)` s'appelle exactement comme une fonction :
+`f(valeur)`. Il ne faut PAS écrire `f` dans la somme, mais le RÉSULTAT de
+`f`.
+
+Parcours le tableau et accumule `f(tab[i])` :
+
+  for (size_t i = 0; i < n; i++)
+      total += f(tab[i]);
+
+`carre` et `oppose` sont fournies juste au-dessus de `main`.

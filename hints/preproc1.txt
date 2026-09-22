@@ -1,0 +1,9 @@
+CARRE : le preprocesseur remplace du TEXTE. Parenthese chaque argument et
+le resultat entier :
+  #define CARRE(x) ((x) * (x))
+Sans les parentheses exterieures, CARRE(2) * 2 donnerait 2 * 2 * 2.
+
+max : ecris une vraie fonction, `return a > b ? a : b;`.
+Une macro evaluerait son argument deux fois, et suivant() serait appele
+deux fois — c'est ce que verifie le CHECK sur `appels`.
+En C moderne, une fonction bat une macro chaque fois que c'est possible.

@@ -1,0 +1,14 @@
+  FILE *f = fopen(chemin, "rb");
+  if (f == NULL) return -1;   /* errno est deja positionne par fopen */
+
+  fseek(f, 0, SEEK_END);      /* deplace le curseur a la fin */
+  long t = ftell(f);          /* position courante = taille en octets */
+
+  fclose(f);
+  if (taille != NULL) *taille = t;
+  return 0;
+
+En cas d'echec, errno dit pourquoi : ENOENT signifie "fichier introuvable".
+On ne lit errno qu'APRES un appel qui a signale l'erreur.
+
+Pense a fclose sur tous les chemins, y compris quand fseek ou ftell echoue.

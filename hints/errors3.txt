@@ -1,0 +1,16 @@
+  char *fin;
+  long v = strtol(s, &fin, 10);
+
+  if (fin == s) return -1;   /* aucun chiffre lu */
+  if (valeur) *valeur = v;
+
+Mets toujours a jour *suffixe, meme quand tu renvoies -1 :
+
+  if (suffixe) *suffixe = fin;
+
+strtol saute les espaces et accepte un signe ; `fin` pointe juste apres le
+dernier caractere consomme. C'est a l'appelant de decider quoi faire du
+reste : ici on le rend via `*suffixe`, qui n'est jamais NULL.
+
+Le terme `endptr` (pointeur de fin) est le nom classique de ce parametre dans
+la documentation de strtol.

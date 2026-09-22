@@ -1,0 +1,6 @@
+Deplacer n disques de `de` vers `vers` en passant par `via` :
+  1. hanoi(n - 1, de, via, vers, coups);   /* n-1 disques hors du chemin */
+  2. (*coups)++;                            /* le plus grand disque bouge  */
+  3. hanoi(n - 1, via, vers, de, coups);    /* on les ramene au-dessus      */
+
+Cas de base : n <= 0 -> ne rien faire (0 coup). Le compte total est 2^n - 1.

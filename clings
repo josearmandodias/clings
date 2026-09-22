@@ -1,0 +1,264 @@
+#!/usr/bin/env bash
+# clings — petits exercices pour apprendre le C, façon rustlings.
+# Aucune dépendance : bash + un compilateur C.
+
+set -u
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+EXDIR="$ROOT/exercises"
+BUILD="$ROOT/.build"
+TPL="$ROOT/.templates"
+ORDER="$EXDIR/order.txt"
+
+CC_BIN="${CC:-cc}"
+BASE_FLAGS="-std=c17 -Wall -Wextra -Werror -Wshadow -g -I$ROOT/include"
+
+if [ -t 1 ]; then
+    R=$'\033[31m'; G=$'\033[32m'; Y=$'\033[33m'; B=$'\033[34m'
+    DIM=$'\033[2m'; BOLD=$'\033[1m'; N=$'\033[0m'
+else
+    R=""; G=""; Y=""; B=""; DIM=""; BOLD=""; N=""
+fi
+
+mkdir -p "$BUILD"
+
+# ---------------------------------------------------------------- outillage
+
+detect_san() {
+    if [ -f "$BUILD/.san" ]; then cat "$BUILD/.san"; return; fi
+    local probe="$BUILD/.probe.c"
+    printf 'int main(void){return 0;}\n' > "$probe"
+    if $CC_BIN -fsanitize=address,undefined "$probe" -o "$BUILD/.probe" 2>/dev/null; then
+        printf -- '-fsanitize=address,undefined -fno-omit-frame-pointer' > "$BUILD/.san"
+    else
+        printf '' > "$BUILD/.san"
+    fi
+    rm -f "$probe" "$BUILD/.probe"
+    cat "$BUILD/.san"
+}
+
+SAN="$(detect_san)"
+
+# première exécution : on garde une copie vierge pour `clings reset`.
+# On capture les .c ET les .h : certains exercices (07_modules) demandent de
+# corriger un header, et `reset` doit pouvoir le restaurer lui aussi.
+if [ ! -d "$TPL" ]; then
+    mkdir -p "$TPL"
+    while IFS= read -r f; do
+        mkdir -p "$TPL/$(dirname "$f")"
+        cp "$EXDIR/$f" "$TPL/$f"
+    done < <(cd "$EXDIR" && find . \( -name '*.c' -o -name '*.h' \))
+fi
+
+names()      { grep -v '^[[:space:]]*$' "$ORDER" | grep -v '^#'; }
+total()      { names | wc -l | tr -d ' '; }
+path_of()    { echo "$EXDIR/$(names | grep -m1 "/$1\.c$")"; }
+rel_of()     { names | grep -m1 "/$1\.c$"; }
+name_of()    { basename "$1" .c; }
+marked()     { grep -q 'I AM NOT DONE' "$1"; }
+
+# compile puis exécute. 0 = ok, 1 = erreur de compilation, 2 = échec à l'exécution
+build_run() {
+    local file="$1" name dir out deps
+    name="$(name_of "$file")"
+    dir="$(dirname "$file")"
+    out="$BUILD/$name"
+    deps=""
+    for d in "$dir/${name}_"*.c; do [ -f "$d" ] && deps="$deps $d"; done
+
+    LAST_OUT=""
+    # shellcheck disable=SC2086
+    LAST_OUT="$($CC_BIN $BASE_FLAGS $SAN -I"$dir" "$file" $deps -o "$out" 2>&1)"
+    [ $? -ne 0 ] && return 1
+
+    LAST_OUT="$(ASAN_OPTIONS=detect_leaks=0 "$out" 2>&1)"
+    [ $? -ne 0 ] && return 2
+    return 0
+}
+
+progress() {
+    local done=0 t; t="$(total)"
+    for rel in $(names); do
+        marked "$EXDIR/$rel" || done=$((done + 1))
+    done
+    local width=32 filled
+    filled=$((done * width / t))
+    printf "%s[" "$DIM"
+    local i=0
+    while [ $i -lt $width ]; do
+        if [ $i -lt $filled ]; then printf "#"; else printf "."; fi
+        i=$((i + 1))
+    done
+    printf "] %d/%d%s\n" "$done" "$t" "$N"
+}
+
+# ---------------------------------------------------------------- commandes
+
+run_one() {
+    local file="$1" name rel rc
+    name="$(name_of "$file")"; rel="$(rel_of "$name")"
+    printf "\n%s>> %s%s  %s(%s)%s\n" "$BOLD" "$name" "$N" "$DIM" "$rel" "$N"
+    build_run "$file"; rc=$?
+
+    case $rc in
+    1)
+        printf "%s   la compilation echoue.%s\n\n" "$R" "$N"
+        echo "$LAST_OUT" | sed 's/^/   /'
+        ;;
+    2)
+        printf "%s   ca compile, mais l'execution echoue.%s\n\n" "$R" "$N"
+        echo "$LAST_OUT" | sed 's/^/   /'
+        ;;
+    0)
+        [ -n "$LAST_OUT" ] && echo "$LAST_OUT" | sed 's/^/   /'
+        if marked "$file"; then
+            printf "%s   tout passe. Retire le commentaire \`// I AM NOT DONE\` pour continuer.%s\n" "$Y" "$N"
+            rc=3
+        else
+            printf "%s   exercice reussi.%s\n" "$G" "$N"
+        fi
+        ;;
+    esac
+    printf "\n"
+    [ $rc -ne 0 ] && printf "   %saide :%s ./clings hint %s\n\n" "$DIM" "$N" "$name"
+    return $rc
+}
+
+next_pending() {
+    for rel in $(names); do
+        local f="$EXDIR/$rel"
+        if marked "$f"; then echo "$f"; return 0; fi
+    done
+    return 1
+}
+
+cmd_run() {
+    local f
+    if [ $# -ge 1 ]; then
+        f="$(path_of "$1")"
+        [ -f "$f" ] || { echo "exercice inconnu : $1"; exit 1; }
+    else
+        f="$(next_pending)" || { printf "\n%sTous les exercices sont termines.%s\n\n" "$G" "$N"; exit 0; }
+    fi
+    run_one "$f"; local rc=$?
+    progress
+    return $rc
+}
+
+cmd_watch() {
+    local f stamp="$BUILD/.stamp"
+    while :; do
+        f="$(next_pending)" || {
+            printf "\n%s  Tous les exercices sont termines. Bien joue.%s\n\n" "$G" "$N"
+            return 0
+        }
+        clear 2>/dev/null
+        printf "%sclings%s  %s(watch — Ctrl-C pour quitter)%s\n" "$BOLD" "$N" "$DIM" "$N"
+        run_one "$f"
+        progress
+        touch "$stamp"
+        while :; do
+            sleep 0.7
+            if [ -n "$(find "$EXDIR" -name '*.c' -newer "$stamp" 2>/dev/null)" ]; then break; fi
+        done
+    done
+}
+
+cmd_list() {
+    printf "\n"
+    for rel in $(names); do
+        local f="$EXDIR/$rel" name status
+        name="$(name_of "$f")"
+        if marked "$f"; then status="${Y}a faire${N}"; else
+            if build_run "$f"; then status="${G}fait   ${N}"; else status="${R}casse  ${N}"; fi
+        fi
+        printf "  %s  %-14s %s%s%s\n" "$status" "$name" "$DIM" "$rel" "$N"
+    done
+    printf "\n"; progress
+}
+
+cmd_hint() {
+    local name="${1:-}"
+    [ -z "$name" ] && { local f; f="$(next_pending)" && name="$(name_of "$f")"; }
+    local h="$ROOT/hints/$name.txt"
+    [ -f "$h" ] || { echo "pas d'indice pour : $name"; exit 1; }
+    printf "\n%sindice — %s%s\n\n" "$BOLD" "$name" "$N"
+    sed 's/^/  /' "$h"; printf "\n"
+}
+
+cmd_solution() {
+    local name="${1:-}"
+    [ -z "$name" ] && { echo "usage: ./clings solution <exercice>"; exit 1; }
+    local s="$ROOT/solutions/$name.c"
+    [ -f "$s" ] || { echo "pas de solution pour : $name"; exit 1; }
+    printf "\n%ssolution — %s%s\n\n" "$BOLD" "$name" "$N"
+    for extra in "$ROOT/solutions/${name}_"*; do
+        [ -f "$extra" ] || continue
+        printf "%s--- %s ---%s\n" "$DIM" "$(basename "$extra")" "$N"
+        cat "$extra"; printf "\n"
+    done
+    printf "%s--- %s.c ---%s\n" "$DIM" "$name" "$N"
+    cat "$s"
+}
+
+cmd_reset() {
+    local name="${1:-}"
+    [ -z "$name" ] && { echo "usage: ./clings reset <exercice>"; exit 1; }
+    local rel; rel="$(rel_of "$name")"
+    [ -n "$rel" ] || { echo "exercice inconnu : $name"; exit 1; }
+    local dir; dir="$(dirname "$rel")"
+    # restaure le fichier de l'exercice, puis ses annexes eventuelles
+    # (07_modules : name_*.c, name_*.h, name.h)
+    cp "$TPL/$rel" "$EXDIR/$rel"
+    local f
+    for f in "$TPL/$dir/${name}_"*.c "$TPL/$dir/${name}_"*.h "$TPL/$dir/${name}.h"; do
+        [ -f "$f" ] || continue
+        cp "$f" "$EXDIR/$dir/$(basename "$f")"
+    done
+    echo "$name remis a zero."
+}
+
+cmd_verify() {
+    local fail=0
+    for rel in $(names); do
+        local f="$EXDIR/$rel" name; name="$(name_of "$f")"
+        if marked "$f"; then printf "  %s? %-14s (non termine)%s\n" "$Y" "$name" "$N"; fail=1
+        elif build_run "$f"; then printf "  %sv %-14s%s\n" "$G" "$name" "$N"
+        else printf "  %sX %-14s%s\n" "$R" "$name" "$N"; fail=1; fi
+    done
+    progress
+    return $fail
+}
+
+usage() {
+    cat <<'USAGE'
+
+clings — petits exercices de C
+
+  ./clings                 lance l'exercice en cours
+  ./clings watch           relance automatiquement a chaque sauvegarde  (le mode normal)
+  ./clings run <nom>       lance un exercice precis
+  ./clings list            etat de tous les exercices
+  ./clings hint [nom]      indice
+  ./clings solution <nom>  affiche une solution possible
+  ./clings reset <nom>     restaure l'enonce d'origine
+  ./clings verify          verifie tout
+
+Chaque fichier compile avec -Wall -Wextra -Werror et, si ton compilateur les
+supporte, ASan + UBSan. Un exercice est termine quand il passe ET que tu as
+retire le commentaire "// I AM NOT DONE".
+
+USAGE
+}
+
+case "${1:-watch}" in
+    watch)    cmd_watch ;;
+    run)      shift; cmd_run "$@" ;;
+    list)     cmd_list ;;
+    hint)     shift; cmd_hint "${1:-}" ;;
+    solution) shift; cmd_solution "${1:-}" ;;
+    reset)    shift; cmd_reset "${1:-}" ;;
+    verify)   cmd_verify ;;
+    -h|--help|help) usage ;;
+    *)        cmd_run "$1" ;;
+esac

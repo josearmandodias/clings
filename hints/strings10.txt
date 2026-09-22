@@ -1,0 +1,7 @@
+Avance caractere par caractere :
+  - si *s == (char)c, renvoie s ;
+  - si *s == '\0', renvoie NULL.
+
+Ordre important : teste l'egalite AVANT le terminateur, sinon chercher '\0'
+renverrait NULL au lieu de l'adresse du '\0'. Comme '\0' termine la boucle,
+une chaine vide cherchee avec 'a' renvoie bien NULL.

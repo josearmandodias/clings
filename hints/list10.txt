@@ -1,0 +1,9 @@
+Tu dois creer de NOUVEAUX noeuds pour chaque element de l'original.
+Parcours l'original avec un pointeur `c` et garde deux pointeurs sur la copie :
+`tete_copie` et `queue` (comme dans depuis_tableau).
+
+Pour chaque c : alloue un noeud, copie c->valeur, mets suivant = NULL.
+Si queue est NULL -> tete_copie = n, sinon queue->suivant = n. Puis queue = n.
+
+En cas d'echec de malloc, libere la copie deja construite et renvoie NULL.
+Une liste vide renvoie NULL.

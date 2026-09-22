@@ -1,0 +1,8 @@
+inserer doit d'abord allouer le noeud (si malloc echoue, renvoie tete inchangee)
+et remplir sa valeur.
+
+Deux cas : si la liste est vide, ou si v < tete->valeur, le nouveau noeud devient
+la tete (n->suivant = tete, renvoie n).
+
+Sinon, parcours avec un pointeur c jusqu'a ce que c->suivant soit NULL ou que
+c->suivant->valeur >= v, puis insere n entre c et c->suivant. Renvoie tete.

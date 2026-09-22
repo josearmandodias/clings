@@ -1,0 +1,6 @@
+Le masque d'un bit a la position pos est (1u << pos).
+
+  set_bit    : x | masque
+  clear_bit  : x & ~masque
+  toggle_bit : x ^ masque
+  test_bit   : (x >> pos) & 1u   (renvoie 0 ou 1)

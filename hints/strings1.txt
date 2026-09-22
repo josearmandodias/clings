@@ -1,0 +1,4 @@
+Une chaine de 3 caracteres a besoin de 4 octets : 'o', 'u', 'i', '\0'.
+
+Agrandis le tableau et ecris le terminateur toi-meme.
+(En pratique, on ecrirait `char mot[] = "oui";` et le compilateur compte.)

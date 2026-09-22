@@ -1,0 +1,5 @@
+Ramene d'abord le champ a la position 0 avec un decalage a droite :
+valeur >> offset.
+
+Ne garde ensuite que `largeur` bits avec un masque : (1u << largeur) - 1.
+Le resultat est (valeur >> offset) & ((1u << largeur) - 1).

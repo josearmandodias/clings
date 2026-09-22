@@ -1,0 +1,8 @@
+`int tab[16]` vit dans la trame de pile de `fabrique`. Cette trame est
+recyclee des le retour : l'adresse renvoyee ne vaut plus rien.
+
+Alloue sur le tas :  int *tab = malloc(n * sizeof(*tab));
+Et pense a verifier que malloc n'a pas renvoye NULL.
+
+Consequence : quelqu'un devra liberer. Ici c'est main, qui fait deja free(t).
+Cette question — "qui libere ?" — est celle que Rust resout avec l'ownership.

@@ -1,0 +1,8 @@
+Deux pointeurs, `lent` et `rapide`, partent de tete.
+A chaque tour : lent avance d'un noeud, rapide de deux.
+Quand rapide atteint la fin (rapide == NULL ou rapide->suivant == NULL),
+lent est sur le milieu.
+
+La condition de boucle doit tester rapide ET rapide->suivant pour ne pas
+dereferencer NULL. Pour une longueur paire, cette version s'arrete sur le
+SECOND du milieu. Liste vide : renvoie tete, c'est deja NULL.

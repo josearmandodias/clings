@@ -1,0 +1,17 @@
+Ecriture, un entier par ligne :
+
+  FILE *f = fopen(chemin, "w");
+  if (f == NULL) return -1;
+  for (size_t i = 0; i < n; i++) fprintf(f, "%d\n", tab[i]);
+  fclose(f);
+  return 0;
+
+Relecture : on additionne tant que fscanf convertit un entier.
+
+  int v;
+  long total = 0;
+  while (fscanf(f, "%d", &v) == 1) total += v;
+
+fscanf renvoie le nombre d'elements convertis : 1 tant qu'il lit un entier,
+0 ou EOF a la fin. Pense a fclose avant de renvoyer, et ecris le total dans
+*somme seulement si le pointeur n'est pas NULL.

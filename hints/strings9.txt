@@ -1,0 +1,6 @@
+Deux indices i et j, i depuis le debut, j depuis la fin. Compare
+tolower((unsigned char)s[i]) et tolower((unsigned char)s[j]) en rapprochant
+i et j. Si une difference apparait -> 0 ; si les indices se croisent -> 1.
+
+La conversion en unsigned char est obligatoire : tolower ne mange pas un
+char signe.

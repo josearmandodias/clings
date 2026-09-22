@@ -1,0 +1,16 @@
+Creer, c'est deux allocations :
+
+  Personne *p = malloc(sizeof(*p));
+  p->nom = malloc(strlen(nom) + 1);
+  strcpy(p->nom, nom);
+  p->age = age;
+
+N'oublie pas le +1 pour l'octet terminateur '\0'.
+
+Liberer dans l'ordre inverse : d'abord la chaine, puis la struct.
+
+  free(p->nom);
+  free(p);
+
+Pense a tester p == NULL dans personne_liberer (un free(NULL) est sans effet,
+mais lire p->nom sur un pointeur NULL ne l'est pas).

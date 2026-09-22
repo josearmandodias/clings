@@ -1,0 +1,6 @@
+Trois allocations ne sont jamais liberees : a, b, et le `tmp` de la boucle
+(celui-la fuit trois fois de suite).
+
+Regle : chaque pointeur renvoye par duplique() doit recevoir un free(),
+juste apres sa derniere utilisation. Dans la boucle, c'est a la fin de
+chaque tour, pas apres la boucle : tu aurais perdu les adresses precedentes.

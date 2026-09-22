@@ -1,0 +1,7 @@
+  - Intervalle vide (debut >= fin) -> renvoyer -1.
+  - Sinon milieu = debut + (fin - debut) / 2.
+  - tab[milieu] == cible -> renvoyer milieu.
+  - tab[milieu] < cible  -> chercher dans [milieu + 1, fin).
+  - tab[milieu] > cible  -> chercher dans [debut, milieu).
+
+Chaque appel divise l'intervalle par deux : la recursion s'arrete vite.

@@ -1,0 +1,5 @@
+Deux idees :
+  - Euclide : pgcd(a, b) = pgcd(b, a % b), et pgcd(a, 0) = a.
+    Le cas de base est donc b == 0.
+  - Les negatifs : ramene a et b a leur valeur absolue avant de commencer
+    (a = -a si a < 0). pgcd(-12, 18) devient alors pgcd(12, 18).

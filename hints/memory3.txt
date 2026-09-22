@@ -1,0 +1,8 @@
+Le programme lit buf apres l'avoir libere. Il ne faut pas "reparer" les
+lectures, il faut les faire AVANT.
+
+Ordre correct :
+  1. strcpy
+  2. calculer n et premier
+  3. free(buf)
+  4. buf = NULL   (le dernier CHECK l'exige, et c'est un bon reflexe)

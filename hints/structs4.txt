@@ -1,0 +1,13 @@
+ajouter_tete : malloc un noeud, remplis valeur et suivant = tete, renvoie
+le nouveau noeud. Si malloc echoue, renvoie tete inchangee.
+
+longueur : parcours avec un pointeur local jusqu'a NULL.
+
+liberer : le piege est ici. Une fois free(tete) fait, tete->suivant n'est
+plus lisible. Sauvegarde le suivant AVANT de liberer :
+  Noeud *suivant = tete->suivant;
+  free(tete);
+  tete = suivant;
+
+Une boucle `while (tete)` gere aussi le cas tete == NULL : liberer(NULL)
+doit rester inoffensif.

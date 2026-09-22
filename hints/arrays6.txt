@@ -1,0 +1,8 @@
+Deux approches :
+
+1. Tampon : recopie les n elements decales de k (modulo n) dans un tableau
+   temporaire, puis recopie le tout dans tab.
+2. Triple inversion : inverse [0, k), inverse [k, n), puis inverse tout.
+   Chaque inversion echange deux elements en avançant depuis les bouts.
+
+N'oublie pas k %= n (et de traiter n == 0 avant le modulo).

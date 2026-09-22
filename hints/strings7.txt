@@ -1,0 +1,6 @@
+Garde un booleen "je suis dans un mot". Pour chaque caractere :
+  - s'il est blanc (isspace), on sort du mot ;
+  - sinon, si on n'etait pas dans un mot, on entre dans un mot et on
+    incremente le compteur.
+
+Ainsi "  un   deux " compte bien 2, et "   " compte 0.

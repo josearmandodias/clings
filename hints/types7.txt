@@ -1,0 +1,9 @@
+Les `double` sont représentés en binaire : 0.1 et 0.2 n'ont pas d'écriture
+exacte, donc leur somme diffère très légèrement de 0.3. `==` compare les
+représentations bit à bit et renvoie forcément faux ici.
+
+On compare l'ÉCART à une tolérance :
+  fabs(a - b) < 1e-9
+
+`fabs` vient de <math.h> et renvoie la valeur absolue. `1e-9` est une
+tolérance raisonnable pour des valeurs de l'ordre de l'unité.

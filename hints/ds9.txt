@@ -1,0 +1,13 @@
+Pour chaque operation, calcule le seau b = hash(cle) % NB_BUCKETS.
+
+table_put : parcours la liste de ce seau. Si une entree a la meme cle (strcmp),
+remplace simplement sa valeur et renvoie 1. Sinon alloue une Entree, duplique la
+cle (malloc(strlen(cle) + 1) puis memcpy/strcpy), remplis valeur, chaine la
+nouvelle entree en tete de seau, renvoie 1. Si un malloc echoue, libere ce qui a
+deja ete alloue et renvoie 0.
+
+table_get : parcours le seau ; si la cle correspond, ecris *valeur et renvoie 1.
+Sinon renvoie 0.
+
+table_free : pour chaque seau, parcours la liste en sauvegardant le suivant,
+free(e->cle) puis free(e). Remets les seaux a NULL.

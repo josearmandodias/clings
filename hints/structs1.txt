@@ -1,0 +1,6 @@
+  typedef struct { int x; int y; } Point;
+
+Sans typedef, il faudrait ecrire `struct Point a;` partout.
+Pour l'initialisation, utilise les designateurs : {.x = 3, .y = 4}.
+Plus lisible et plus sur que {3, 4} : si quelqu'un reordonne les champs,
+ton code reste correct.

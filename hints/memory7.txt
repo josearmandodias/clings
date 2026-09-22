@@ -1,0 +1,12 @@
+Deux allocations emboitees :
+
+  1. le tableau de pointeurs :
+       int **m = malloc(lignes * sizeof(*m));
+  2. chaque ligne :
+       m[i] = malloc(colonnes * sizeof(*m[i]));
+
+Si l'allocation d'une ligne echoue, libere les lignes precedentes (indices
+0 a i-1) puis le tableau de pointeurs, et renvoie NULL.
+
+liberer_matrice parcourt les lignes, free chacune, puis free(m).
+Pense a tolerer m == NULL (rien a faire).

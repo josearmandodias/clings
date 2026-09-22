@@ -1,0 +1,6 @@
+Garde un candidat et son indice :
+  - initialise l'indice du maximum a 0 ;
+  - parcours a partir de l'indice 1 ;
+  - si tab[i] est STRICTEMENT plus grand que tab[best], mets a jour best.
+
+Strictement, justement pour garder la premiere occurrence en cas d'egalite.

@@ -1,0 +1,14 @@
+Deux cles, dans cet ordre :
+
+  1. si les ages different, compare-les (sans soustraction, qui peut deborder
+     sur des int extremes) :
+         return pa->age < pb->age ? -1 : 1;
+  2. sinon les ages sont egaux, departage par le nom :
+         return strcmp(pa->nom, pb->nom);
+
+Commence par recuperer les vrais types :
+
+  const Personne *pa = a;
+  const Personne *pb = b;
+
+Puis dans main : qsort(gens, n, sizeof(gens[0]), cmp_personne);

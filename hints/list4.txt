@@ -1,0 +1,8 @@
+Utilise un "pointeur vers le lien" : Noeud **lien = &tete. Tant que *lien n'est
+pas NULL :
+  - si (*lien)->valeur == v : sauvegarde cible = *lien, fais
+    *lien = cible->suivant, puis free(cible) ; ne fais PAS avancer lien.
+  - sinon : lien = &(*lien)->suivant.
+
+Cette astuce traite la tete comme les autres noeuds (pas de cas particulier) et
+permet de supprimer plusieurs occurrences a la suite. Renvoie tete a la fin.

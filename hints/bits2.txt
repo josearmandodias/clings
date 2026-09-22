@@ -1,0 +1,2 @@
+Parcours les bits avec x &= x - 1 : cette operation efface le bit a 1 le plus
+bas de x. Compte combien de fois on peut la repeter avant que x devienne 0.

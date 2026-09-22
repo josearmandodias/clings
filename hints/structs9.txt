@@ -1,0 +1,11 @@
+Le champ `calcul` est un pointeur de fonction. On l'appelle comme une fonction
+ordinaire, mais a travers la struct :
+
+  return o->calcul(a, b);
+
+Distinction utile :
+  o->calcul   = l'adresse de la fonction (le pointeur)
+  o->calcul(a, b) = l'appel de cette fonction
+
+Le champ `op` n'est pas necessaire pour evaluer : il sert a documenter
+l'operation. C'est bien le pointeur qui decide du calcul.

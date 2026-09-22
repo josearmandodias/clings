@@ -1,0 +1,5 @@
+`copie = original` ne copie pas la chaine, seulement l'adresse. Il n'y a
+qu'un seul bloc alloue, donc il ne doit y avoir qu'un seul free().
+
+Supprime celui qui est en trop. Demande-toi lequel des deux pointeurs est
+le PROPRIETAIRE : l'autre n'est qu'un emprunt.

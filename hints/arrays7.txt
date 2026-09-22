@@ -1,0 +1,6 @@
+Garde deux bornes debut et fin (fin exclue) et reduis l'intervalle :
+  milieu = debut + (fin - debut) / 2
+  - tab[milieu] == cible -> renvoie milieu ;
+  - tab[milieu] < cible  -> debut = milieu + 1 ;
+  - sinon                -> fin = milieu.
+Tant que debut < fin. Si l'intervalle se vide, la cible est absente : -1.

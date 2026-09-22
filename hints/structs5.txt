@@ -1,0 +1,11 @@
+Le centre se lit c->centre.x et c->centre.y.
+
+Distance au carre :
+
+  int dx = p.x - c->centre.x;
+  int dy = p.y - c->centre.y;
+  return dx * dx + dy * dy <= c->rayon * c->rayon;
+
+Inutile de prendre la racine carree : comparer les carres suffit et evite
+les flottants. (3,4) est a 9 + 16 = 25, exactement sur le bord d'un disque
+de rayon 5 -> contenu.

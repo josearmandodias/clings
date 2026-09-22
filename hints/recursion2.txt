@@ -1,0 +1,7 @@
+Coupe l'exposant en deux a chaque appel :
+  - exp == 0 -> renvoyer 1 (cas de base) ;
+  - sinon calculer demi = puissance(base, exp / 2) ;
+  - exp pair   -> demi * demi ;
+  - exp impair -> demi * demi * base.
+
+Un seul appel recursif par niveau : c'est ce qui donne O(log exp).

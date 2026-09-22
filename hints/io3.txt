@@ -1,0 +1,16 @@
+Un fichier binaire s'ouvre avec les modes "wb" (ecriture) et "rb" (lecture),
+jamais "w" ou "r".
+
+  FILE *f = fopen(chemin, "wb");
+  if (f == NULL) return -1;
+  size_t n = fwrite(p, sizeof *p, 1, f);
+  fclose(f);
+  return n == 1 ? 0 : -1;
+
+fread est le symetrique :
+
+  size_t n = fread(p, sizeof *p, 1, f);
+
+`sizeof *p` est la taille d'une struct Point : fwrite copie n elements de
+cette taille. Verifie toujours le nombre d'elements reellement traites
+(ici 1), et n'oublie pas fclose dans tous les cas.

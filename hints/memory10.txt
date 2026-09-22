@@ -1,0 +1,11 @@
+`*c = *p` copie le pointeur `nom` tel quel : les deux structs partagent la
+meme chaine (et liberer les deux ferait un double free).
+
+Reprends la logique de personne_creer pour la copie :
+
+  Personne *c = malloc(sizeof(*c));
+  c->nom = malloc(strlen(p->nom) + 1);
+  strcpy(c->nom, p->nom);
+  c->age = p->age;
+
+Pense a liberer `c` si l'allocation de la chaine echoue.

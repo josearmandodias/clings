@@ -1,0 +1,7 @@
+Alloue le noeud (si malloc echoue, renvoie tete inchangee), remplis valeur = v
+et suivant = NULL.
+
+Si tete est NULL, ce noeud est la nouvelle tete : renvoie-le.
+
+Sinon parcours jusqu'au dernier noeud (celui dont suivant == NULL), fais pointer
+son suivant vers le nouveau noeud, puis renvoie tete.

@@ -1,0 +1,7 @@
+Meme technique que le milieu : `lent` avance d'un noeud, `rapide` de deux.
+Boucle tant que rapide != NULL et rapide->suivant != NULL.
+A chaque tour, apres avoir avance les deux, compare : si lent == rapide, il y a
+un cycle -> renvoie 1.
+
+Si la boucle se termine sans rencontre, la liste est finie -> renvoie 0.
+Une liste vide renvoie 0 (la boucle ne s'execute pas).

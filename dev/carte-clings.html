@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>clings — carte du cours</title>
+<style>
+  :root {
+    --bg: #0e1116; --card: #161b22; --line: #262d36;
+    --txt: #e6edf3; --dim: #8b949e; --accent: #f0883e; --done: #3fb950;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--txt);
+         font: 15px/1.5 ui-sans-serif, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  header { padding: 40px 24px 24px; max-width: 1100px; margin: 0 auto; }
+  h1 { margin: 0; font-size: 44px; letter-spacing: -1.5px; }
+  h1 span { color: var(--accent); }
+  .sub { color: var(--dim); margin: 6px 0 22px; }
+  .bar { height: 10px; background: var(--card); border: 1px solid var(--line);
+         border-radius: 999px; overflow: hidden; }
+  .bar > div { height: 100%; width: 0;
+               background: linear-gradient(90deg, #f0883e, #3fb950);
+               transition: width .25s ease; }
+  #count { color: var(--dim); font-variant-numeric: tabular-nums; margin-top: 8px; }
+  main { max-width: 1100px; margin: 0 auto; padding: 8px 24px 60px;
+         display: grid; gap: 14px;
+         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+  .card { background: var(--card); border: 1px solid var(--line);
+          border-radius: 12px; padding: 14px 16px; }
+  .card.done { border-color: var(--done); }
+  .card h2 { font-size: 14px; margin: 0 0 10px; display: flex;
+             align-items: center; gap: 8px; text-transform: lowercase; }
+  .num { color: var(--accent); font-variant-numeric: tabular-nums; }
+  .badge { margin-left: auto; color: var(--dim); font-weight: 400; font-size: 12px; }
+  ul { list-style: none; margin: 0; padding: 0; display: flex;
+       flex-wrap: wrap; gap: 6px; }
+  label { display: inline-flex; align-items: center; gap: 5px; font-size: 13px;
+          border: 1px solid var(--line); border-radius: 999px;
+          padding: 3px 9px 3px 6px; cursor: pointer; color: var(--dim);
+          user-select: none; }
+  label:hover { border-color: var(--accent); color: var(--txt); }
+  input { accent-color: var(--done); margin: 0; }
+  input:checked + span { color: var(--done); text-decoration: line-through; }
+  footer { max-width: 1100px; margin: 0 auto; padding: 0 24px 40px;
+           color: var(--dim); font-size: 12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>clings<span>.</span></h1>
+  <p class="sub">109 exercices de C — carte du cours. Coche pour suivre ta progression.</p>
+  <div class="bar"><div id="bar"></div></div>
+  <div id="count"></div>
+</header>
+<main>
+  <section class="card">
+    <h2><span class="num">00</span> intro <span class="badge"></span></h2>
+    <ul>
+      <li><label><input type="checkbox" data-name="intro1"><span>intro1</span></label></li>
+      <li><label><input type="checkbox" data-name="intro2"><span>intro2</span></label></li>
+    </ul>
+  </section>
+  <section class="card">
+    <h2><span class="num">01</span> types <span class="badge"></span></h2>
+    <ul>
+      <li><label><input type="checkbox" data-name="types1"><span>types1</span></label></li>
+      <li><label><input type="checkbox" data-name="types2"><span>types2</span></label></li>
+      <li><label><input type="checkbox" data-name="types3"><span>types3</span></label></li>
+      <li><label><input type="checkbox" data-name="types4"><span>types4</span></label></li>
+      <li><label><input type="checkbox" data-name="types5"><span>types5</span></label></li>
+      <li><label><input type="checkbox" data-name="types6"><span>types6</span></label></li>
+      <li><label><input type="checkbox" data-name="types7"><span>types7</span></label></li>
+      <li><label><input type="checkbox" data-name="types8"><span>types8</span></label></li>
+    </ul>
+  </section>
+  <section class="card">
+    <h2><span class="num">02</span> pointers <span class="badge"></span></h2>
+    <ul>
+      <li><label><input type="checkbox" data-name="pointers1"><span>pointers1</span></label></li>
+      <li><label><input type="checkbox" data-name="pointers2"><span>pointers2</span></label></li>
+      <li><label><input type="checkbox" data-name="pointers3"><span>pointers3</span></label></li>
+      <li><label><input type="checkbox" data-name="pointers4"><span>pointers4</span></label></li>
+      <li><label><input type="checkbox" data-name="pointers5"><span>pointers5</span></label></li>
+      <li><label><input type="checkbox" data-name="pointers6"><span>pointers6</span></label></li>
+      <li><label><input type="checkbox" data-name="pointers7"><span>pointers7</span></label></li>
+      <li><label><input type="checkbox" data-name="pointers8"><span>pointers8</span></label></li>
+      <li><label><input type="checkbox" data-name="pointers9"><span>pointers9</span></label></li>
+      <li><label><input type="checkbox" data-name="pointers10"><span>pointers10</span></label></li>
+      <li><label><input type="checkbox" data-name="pointers11"><span>pointers11</span></label></li>
+    </ul>
+  </section>
+  <section class="card">
+    <h2><span class="num">03</span> arrays <span class="badge"></span></h2>
+    <ul>
+      <li><label><input type="checkbox" data-name="arrays1"><span>arrays1</span></label></li>
+      <li><label><input type="checkbox" data-name="arrays2"><span>arrays2</span></label></li>
+      <li><label><input type="checkbox" data-name="arrays3"><span>arrays3</span></label></li>
+      <li><label><input type="checkbox" data-name="arrays4"><span>arrays4</span></label></li>
+      <li><label><input type="checkbox" data-name="arrays5"><span>arrays5</span></label></li>
+      <li><label><input type="checkbox" data-name="arrays6"><span>arrays6</span></label></li>
+      <li><label><input type="checkbox" data-name="arrays7"><span>arrays7</span></label></li>
+      <li><label><input type="checkbox" data-name="arrays8"><span>arrays8</span></label></li>
+      <li><label><input type="checkbox" data-name="arrays9"><span>arrays9</span></label></li>
+    </ul>
+  </section>
+  <section class="card">
+    <h2><span class="num">04</span> strings <span class="badge"></span></h2>
+    <ul>
+      <li><label><input type="checkbox" data-name="strings1"><span>strings1</span></label></li>
+      <li><label><input type="checkbox" data-name="strings2"><span>strings2</span></label></li>
+      <li><label><input type="checkbox" data-name="strings3"><span>strings3</span></label></li>
+      <li><label><input type="checkbox" data-name="strings4"><span>strings4</span></label></li>
+      <li><label><input type="checkbox" data-name="strings5"><span>strings5</span></label></li>
+      <li><label><input type="checkbox" data-name="strings6"><span>strings6</span></label></li>
+      <li><label><input type="checkbox" data-name="strings7"><span>strings7</span></label></li>
+      <li><label><input type="checkbox" data-name="strings8"><span>strings8</span></label></li>
+      <li><label><input type="checkbox" data-name="strings9"><span>strings9</span></label></li>
+      <li><label><input type="checkbox" data-name="strings10"><span>strings10</span></label></li>
+    </ul>
+  </section>
+  <section class="card">
+    <h2><span class="num">05</span> memory <span class="badge"></span></h2>
+    <ul>
+      <li><label><input type="checkbox" data-name="memory1"><span>memory1</span></label></li>
+      <li><label><input type="checkbox" data-name="memory2"><span>memory2</span></label></li>
+      <li><label><input type="checkbox" data-name="memory3"><span>memory3</span></label></li>
+      <li><label><input type="checkbox" data-name="memory4"><span>memory4</span></label></li>
+      <li><label><input type="checkbox" data-name="memory5"><span>memory5</span></label></li>
+      <li><label><input type="checkbox" data-name="memory6"><span>memory6</span></label></li>
+      <li><label><input type="checkbox" data-name="memory7"><span>memory7</span></label></li>
+      <li><label><input type="checkbox" data-name="memory8"><span>memory8</span></label></li>
+      <li><label><input type="checkbox" data-name="memory9"><span>memory9</span></label></li>
+      <li><label><input type="checkbox" data-name="memory10"><span>memory10</span></label></li>
+      <li><label><input type="checkbox" data-name="memory11"><span>memory11</span></label></li>
+    </ul>
+  </section>
+  <section class="card">
+    <h2><span class="num">06</span> structs <span class="badge"></span></h2>
+    <ul>
+      <li><label><input type="checkbox" data-name="structs1"><span>structs1</span></label></li>
+      <li><label><input type="checkbox" data-name="structs2"><span>structs2</span></label></li>
+      <li><label><input type="checkbox" data-name="structs3"><span>structs3</span></label></li>
+      <li><label><input type="checkbox" data-name="structs4"><span>structs4</span></label></li>
+      <li><label><input type="checkbox" data-name="structs5"><span>structs5</span></label></li>
+      <li><label><input type="checkbox" data-name="structs6"><span>structs6</span></label></li>
+      <li><label><input type="checkbox" data-name="structs7"><span>structs7</span></label></li>
+      <li><label><input type="checkbox" data-name="structs8"><span>structs8</span></label></li>
+      <li><label><input type="checkbox" data-name="structs9"><span>structs9</span></label></li>
+      <li><label><input type="checkbox" data-name="structs10"><span>structs10</span></label></li>
+    </ul>
+  </section>
+  <section class="card">
+    <h2><span class="num">07</span> modules <span class="badge"></span></h2>
+    <ul>
+      <li><label><input type="checkbox" data-name="modules1"><span>modules1</span></label></li>
+      <li><label><input type="checkbox" data-name="modules2"><span>modules2</span></label></li>
+      <li><label><input type="checkbox" data-name="preproc1"><span>preproc1</span></label></li>
+      <li><label><input type="checkbox" data-name="preproc2"><span>preproc2</span></label></li>
+      <li><label><input type="checkbox" data-name="preproc3"><span>preproc3</span></label></li>
+      <li><label><input type="checkbox" data-name="preproc4"><span>preproc4</span></label></li>
+    </ul>
+  </section>
+  <section class="card">
+    <h2><span class="num">08</span> io <span class="badge"></span></h2>
+    <ul>
+      <li><label><input type="checkbox" data-name="io1"><span>io1</span></label></li>
+      <li><label><input type="checkbox" data-name="io2"><span>io2</span></label></li>
+      <li><label><input type="checkbox" data-name="io3"><span>io3</span></label></li>
+      <li><label><input type="checkbox" data-name="errors1"><span>errors1</span></label></li>
+      <li><label><input type="checkbox" data-name="errors2"><span>errors2</span></label></li>
+      <li><label><input type="checkbox" data-name="errors3"><span>errors3</span></label></li>
+    </ul>
+  </section>
+  <section class="card">
+    <h2><span class="num">09</span> recursion <span class="badge"></span></h2>
+    <ul>
+      <li><label><input type="checkbox" data-name="recursion1"><span>recursion1</span></label></li>
+      <li><label><input type="checkbox" data-name="recursion2"><span>recursion2</span></label></li>
+      <li><label><input type="checkbox" data-name="recursion3"><span>recursion3</span></label></li>
+      <li><label><input type="checkbox" data-name="recursion4"><span>recursion4</span></label></li>
+      <li><label><input type="checkbox" data-name="recursion5"><span>recursion5</span></label></li>
+      <li><label><input type="checkbox" data-name="recursion6"><span>recursion6</span></label></li>
+      <li><label><input type="checkbox" data-name="recursion7"><span>recursion7</span></label></li>
+    </ul>
+  </section>
+  <section class="card">
+    <h2><span class="num">10</span> datastructures <span class="badge"></span></h2>
+    <ul>
+      <li><label><input type="checkbox" data-name="ds1"><span>ds1</span></label></li>
+      <li><label><input type="checkbox" data-name="ds2"><span>ds2</span></label></li>
+      <li><label><input type="checkbox" data-name="ds3"><span>ds3</span></label></li>
+      <li><label><input type="checkbox" data-name="ds4"><span>ds4</span></label></li>
+      <li><label><input type="checkbox" data-name="ds5"><span>ds5</span></label></li>
+      <li><label><input type="checkbox" data-name="ds6"><span>ds6</span></label></li>
+      <li><label><input type="checkbox" data-name="ds7"><span>ds7</span></label></li>
+      <li><label><input type="checkbox" data-name="ds8"><span>ds8</span></label></li>
+      <li><label><input type="checkbox" data-name="ds9"><span>ds9</span></label></li>
+    </ul>
+  </section>
+  <section class="card">
+    <h2><span class="num">11</span> bitwise <span class="badge"></span></h2>
+    <ul>
+      <li><label><input type="checkbox" data-name="bits1"><span>bits1</span></label></li>
+      <li><label><input type="checkbox" data-name="bits2"><span>bits2</span></label></li>
+      <li><label><input type="checkbox" data-name="bits3"><span>bits3</span></label></li>
+      <li><label><input type="checkbox" data-name="bits4"><span>bits4</span></label></li>
+      <li><label><input type="checkbox" data-name="bits5"><span>bits5</span></label></li>
+      <li><label><input type="checkbox" data-name="bits6"><span>bits6</span></label></li>
+    </ul>
+  </section>
+  <section class="card">
+    <h2><span class="num">12</span> tri <span class="badge"></span></h2>
+    <ul>
+      <li><label><input type="checkbox" data-name="tri1"><span>tri1</span></label></li>
+      <li><label><input type="checkbox" data-name="tri2"><span>tri2</span></label></li>
+      <li><label><input type="checkbox" data-name="tri3"><span>tri3</span></label></li>
+      <li><label><input type="checkbox" data-name="tri4"><span>tri4</span></label></li>
+    </ul>
+  </section>
+  <section class="card">
+    <h2><span class="num">13</span> linked_lists <span class="badge"></span></h2>
+    <ul>
+      <li><label><input type="checkbox" data-name="list1"><span>list1</span></label></li>
+      <li><label><input type="checkbox" data-name="list2"><span>list2</span></label></li>
+      <li><label><input type="checkbox" data-name="list3"><span>list3</span></label></li>
+      <li><label><input type="checkbox" data-name="list4"><span>list4</span></label></li>
+      <li><label><input type="checkbox" data-name="list5"><span>list5</span></label></li>
+      <li><label><input type="checkbox" data-name="list6"><span>list6</span></label></li>
+      <li><label><input type="checkbox" data-name="list7"><span>list7</span></label></li>
+      <li><label><input type="checkbox" data-name="list8"><span>list8</span></label></li>
+      <li><label><input type="checkbox" data-name="list9"><span>list9</span></label></li>
+      <li><label><input type="checkbox" data-name="list10"><span>list10</span></label></li>
+    </ul>
+  </section>
+</main>
+<footer>Genere depuis exercises/order.txt — la progression est sauvegardee dans ce navigateur.</footer>
+<script>
+  const KEY = "clings-progress-v1";
+  const boxes = [...document.querySelectorAll("input[type=checkbox]")];
+  const bar = document.getElementById("bar");
+  const count = document.getElementById("count");
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) {}
+
+  function refresh() {
+    const done = boxes.filter(b => b.checked).length;
+    bar.style.width = (done / boxes.length * 100) + "%";
+    count.textContent = done + " / " + boxes.length + " termines";
+    document.querySelectorAll(".card").forEach(card => {
+      const cbs = [...card.querySelectorAll("input")];
+      const d = cbs.filter(b => b.checked).length;
+      card.querySelector(".badge").textContent = d + "/" + cbs.length;
+      card.classList.toggle("done", d === cbs.length);
+    });
+  }
+  boxes.forEach(b => {
+    b.checked = !!saved[b.dataset.name];
+    b.addEventListener("change", () => {
+      saved[b.dataset.name] = b.checked;
+      localStorage.setItem(KEY, JSON.stringify(saved));
+      refresh();
+    });
+  });
+  refresh();
+</script>
+</body>
+</html>

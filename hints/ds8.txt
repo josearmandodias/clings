@@ -1,0 +1,9 @@
+infixe (gauche, noeud, droite) sur un ABR visite les valeurs par ordre croissant.
+
+Version recursive qui renvoie le nombre d'elements ecrits dans `sortie` :
+  - si racine == NULL : renvoie 0 ;
+  - n = infixe(racine->gauche, sortie) : le sous-arbre gauche a rempli
+    sortie[0..n) ;
+  - ecris sortie[n] = racine->valeur ;
+  - traite le sous-arbre droit a partir de sortie + n + 1 ;
+  - le total vaut n + 1 + (ce que renvoie l'appel sur le droit).

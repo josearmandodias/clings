@@ -1,0 +1,5 @@
+memcpy suppose que source et destination ne se recouvrent pas ; ici elles se
+chevauchent des qu'on decale vers la gauche. memmove, lui, gere le
+recouvrement (il copie dans le bon sens).
+
+Pense aussi a faire (*n)-- apres le decalage.

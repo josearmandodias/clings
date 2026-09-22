@@ -1,0 +1,13 @@
+Un `switch` sur une valeur d'`enum` se remplit case par case :
+
+  switch (s) {
+  case PRINTEMPS: return "printemps";
+  case ETE:       return "ete";
+  case AUTOMNE:   return "automne";
+  case HIVER:     return "hiver";
+  }
+
+Chaque `case` renvoie directement, donc pas besoin de `break`. Comme les
+quatre valeurs de l'énumération sont couvertes, `-Wswitch` est satisfait.
+
+Les noms des saisons de test sont sans accent : "ete", pas "été".

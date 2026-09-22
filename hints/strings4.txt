@@ -1,0 +1,9 @@
+Deux declarations qui se ressemblent et n'ont rien a voir :
+
+  char *mot = "bonjour";   pointeur vers un litteral EN LECTURE SEULE
+  char  mot[] = "bonjour"; tableau local initialise avec une COPIE
+
+Passe a la seconde forme, et enleve le const du parametre puisque la
+fonction ecrit dans la chaine.
+
+Pense aux cas limites : ne fais rien si s vaut NULL ou si la chaine est vide.

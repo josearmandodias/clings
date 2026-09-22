@@ -1,0 +1,6 @@
+Une factorielle recursive tient en deux cas :
+  - cas de base : si n <= 1, renvoyer 1 ;
+  - cas general : renvoyer n * factorielle(n - 1).
+
+Le cas de base empeche la recursion de ne jamais s'arreter.
+N'ecris PAS de boucle : le corps de la fonction doit s'appeler lui-meme.

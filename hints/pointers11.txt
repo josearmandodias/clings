@@ -1,0 +1,12 @@
+Garde l'adresse du meilleur candidat dans un `const char *best`, en commençant
+par `mots[0]`. Compare les longueurs avec `strlen` :
+
+  for (size_t i = 1; i < n; i++)
+      if (strlen(mots[i]) > strlen(best))
+          best = mots[i];
+
+Utilise `>` (strictement plus grand) : ainsi, en cas d'égalité, le premier mot
+reste sélectionné.
+
+Commence par traiter `n == 0` : renvoie `NULL`, car `mots[0]` n'existe pas
+dans ce cas.

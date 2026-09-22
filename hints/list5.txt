@@ -1,0 +1,8 @@
+Cas de base : une liste vide (tete == NULL) ou un seul noeud
+(tete->suivant == NULL) est deja inversee -> renvoie tete.
+
+Sinon, inverse recursivement le reste : suite = inverser_rec(tete->suivant).
+Désormais le noeud qui suit la tete (dans la liste inversee) est le dernier ;
+fais-lui pointer vers tete : tete->suivant->suivant = tete.
+Termine par tete->suivant = NULL (tete devient la nouvelle queue).
+Renvoie suite.

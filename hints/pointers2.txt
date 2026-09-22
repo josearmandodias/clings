@@ -1,0 +1,6 @@
+Pour qu'une fonction modifie une variable de l'appelant, elle doit recevoir
+son ADRESSE, pas sa valeur.
+
+  void echange(int *a, int *b)   -> parametres pointeurs
+  int tmp = *a; *a = *b; *b = tmp;   -> on travaille sur les valeurs pointees
+  echange(&x, &y);                   -> a l'appel, on passe les adresses

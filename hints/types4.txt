@@ -1,0 +1,7 @@
+`a + b` additionne d'abord deux `int` : le résultat est calculé en 32 bits,
+puis converti en `long` — trop tard. Si la somme dépasse INT_MAX, le
+débordement a déjà eu lieu.
+
+Convertis un opérande AVANT l'addition : `(long)a + b`. Un seul suffit,
+l'autre est promu automatiquement en long, comme pour la division flottante
+du types3.

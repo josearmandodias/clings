@@ -1,0 +1,7 @@
+Le probleme est double :
+  - la signature prend `char *` alors qu'on lui passe un `const char *` ;
+  - le corps ecrit dans la chaine (*s = 'A'), ce qu'il ne devrait pas.
+
+Mets `const char *s` en parametre, et supprime la ligne qui ecrit.
+Une fois const, le compilateur refuserait cette ligne de toute facon : c'est
+exactement le service que const rend.

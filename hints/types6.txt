@@ -1,0 +1,8 @@
+Le cast `(int)x` tronque vers zéro : il jette la partie fractionnaire sans
+regarder si elle vaut plus ou moins d'un demi.
+
+Astuce : décale d'abord de 0.5 dans le bon sens, puis tronque.
+  - positif : (int)(x + 0.5)   -> 2.7 + 0.5 = 3.2 -> 3
+  - négatif : (int)(x - 0.5)   -> -2.5 - 0.5 = -3.0 -> -3
+
+D'où le ternaire `x < 0.0 ? (int)(x - 0.5) : (int)(x + 0.5)`.

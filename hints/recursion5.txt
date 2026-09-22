@@ -1,0 +1,6 @@
+  - Si n est negatif, commence par n = -n.
+  - Cas de base : n == 0 -> 0.
+  - Sinon : (n % 10) + somme_chiffres(n / 10).
+
+n / 10 fait disparaitre le dernier chiffre : le probleme retrecit a chaque
+appel jusqu'a atteindre zero.

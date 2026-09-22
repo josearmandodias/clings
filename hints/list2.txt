@@ -1,0 +1,8 @@
+contient : parcours la liste avec un pointeur qui commence a tete ; des que
+c->valeur == v renvoie 1 ; si la boucle se termine (c == NULL), renvoie 0.
+
+kieme : avance k fois a partir de tete. Si tu atteins NULL avant d'avoir fait
+les k pas, l'indice n'existe pas -> renvoie 0 SANS ecrire dans *out.
+Sinon ecris *out = c->valeur et renvoie 1.
+
+Attention a l'ordre : ne fais *out = ... qu'apres avoir verifie que c != NULL.

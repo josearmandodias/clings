@@ -1,0 +1,6 @@
+sizeof(tab) dans la fonction vaut la taille d'un POINTEUR (8 octets), pas
+celle du tableau. L'information de longueur a disparu au passage.
+
+Il n'y a pas de solution astucieuse : ajoute un parametre.
+  int somme(const int *tab, size_t n)
+Le test appelle deja somme(valeurs, 5).

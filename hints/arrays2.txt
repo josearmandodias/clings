@@ -1,0 +1,6 @@
+Un tableau de N elements a pour indices valides 0 a N-1.
+`i <= N` en ecrit un de trop.
+
+Lance l'exercice avant de corriger et lis le rapport ASan : la premiere
+ligne dit "stack-buffer-overflow", et la pile d'appels pointe la ligne
+exacte. Apprendre a lire ce rapport te fera gagner des heures plus tard.

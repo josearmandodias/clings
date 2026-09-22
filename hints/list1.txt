@@ -1,0 +1,7 @@
+depuis_tableau : garde deux pointeurs, `tete` et `queue` (le dernier noeud).
+Pour chaque tab[i], alloue un noeud, mets valeur = tab[i] et suivant = NULL.
+Si queue est NULL la liste etait vide -> tete = x, sinon queue->suivant = x.
+Termine toujours par queue = x.
+
+longueur : un compteur, une boucle `while (tete) { n++; tete = tete->suivant; }`.
+Pense a renvoyer 0 pour une liste vide (tete == NULL), ce que la boucle fait deja.

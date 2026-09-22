@@ -1,0 +1,12 @@
+La pile stocke un tableau `data`, sa taille courante `taille` et sa capacite
+`capacite` (nombre de cases allouees).
+
+pile_push : si taille == capacite, il faut agrandir AVANT d'ecrire. Choisis une
+nouvelle capacite (par ex. 4 au depart, puis *2), appelle realloc via une
+variable temporaire pour ne pas perdre l'ancien bloc en cas d'echec. Si realloc
+echoue, renvoie 0. Sinon ecris data[taille] = v ; taille++ ; renvoie 1.
+
+pile_pop : si taille == 0, renvoie 0 sans toucher *v. Sinon taille-- puis
+*v = data[taille], renvoie 1.
+
+pile_free : free(data), puis remets data = NULL et taille = capacite = 0.

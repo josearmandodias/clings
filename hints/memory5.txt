@@ -1,0 +1,12 @@
+Structure de vec_push :
+
+  si taille == capacite :
+      nouvelle capacite = capacite ? capacite * 2 : 4
+      int *tmp = realloc(v->data, nc * sizeof(*v->data));
+      si tmp == NULL -> renvoyer 0 SANS toucher a v->data
+      v->data = tmp; v->capacite = nc;
+  v->data[v->taille++] = valeur;
+  renvoyer 1
+
+Le pointeur temporaire n'est pas une coquetterie : `v->data = realloc(v->data, ...)`
+perd le bloc d'origine si realloc echoue, et la fuite est irrattrapable.

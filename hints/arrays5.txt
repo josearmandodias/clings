@@ -1,0 +1,4 @@
+Deux indices qui se rapprochent : i part de 0, j part de n-1.
+Tant que i < j : echange tab[i] et tab[j] via un temporaire, puis i++ et j--.
+
+Il suffit de faire n/2 echanges : au-dela, on remettrait tout a l'envers.

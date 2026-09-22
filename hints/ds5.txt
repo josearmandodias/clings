@@ -1,0 +1,8 @@
+Utilise trois pointeurs : prec (NULL au depart), courant (la tete) et suivant.
+A chaque tour :
+  suivant = courant->suivant;   /* a sauvegarder AVANT de casser le lien */
+  courant->suivant = prec;
+  prec = courant;
+  courant = suivant;
+
+Quand courant devient NULL, la nouvelle tete est prec.

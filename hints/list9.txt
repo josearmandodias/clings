@@ -1,0 +1,9 @@
+La liste est triee, donc les doublons sont cote a cote. Parcours avec `courant`.
+Regarde le suivant de courant :
+  - si courant->valeur == courant->suivant->valeur : c'est un doublon.
+    Sauvegarde-le, fais courant->suivant = doublon->suivant, puis free(doublon).
+    Ne fais PAS avancer courant (il peut y avoir une troisieme occurrence).
+  - sinon, avance courant.
+
+Condition de boucle : while (courant && courant->suivant). La tete ne change
+jamais puisqu'on garde toujours la premiere occurrence.

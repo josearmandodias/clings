@@ -1,0 +1,7 @@
+Pour i de 1 a n-1 :
+  - garde tab[i] dans une variable `cle` ;
+  - fais remonter d'une case vers la droite les elements plus grands que
+    `cle` (boucle tant que j > 0 && tab[j - 1] > cle) ;
+  - pose `cle` dans la case liberee.
+
+A la fin de chaque etape, tab[0..i] est trie. Si n vaut 0 ou 1 : rien a faire.

@@ -1,0 +1,12 @@
+La signature est imposee par qsort :
+
+  static int cmp_age(const void *a, const void *b)
+
+Commence par recuperer les vrais types :
+  const Personne *pa = a;
+  const Personne *pb = b;
+
+Puis compare avec des if plutot que de renvoyer pa->age - pb->age :
+la soustraction peut deborder sur des int extremes.
+
+Appel : qsort(gens, n, sizeof(gens[0]), cmp_age);

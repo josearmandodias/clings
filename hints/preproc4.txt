@@ -1,0 +1,21 @@
+Un bloc conditionnel du preprocesseur ressemble a un `if`, mais il choisit
+le code AVANT la compilation :
+
+  #if NIVEAU == 1
+      return "debutant";
+  #elif NIVEAU == 2
+      return "intermediaire";
+  #else
+      return "expert";
+  #endif
+
+Avec NIVEAU qui vaut 2, seul le deuxieme `return` survit : les autres ne sont
+meme pas compiles. Il se termine par `#endif`.
+
+Bonus : enveloppe un diagnostic dans #ifdef DEBUG :
+
+  #ifdef DEBUG
+      fprintf(stderr, "NIVEAU = %d\n", NIVEAU);
+  #endif
+
+Sans -DDEBUG a la compilation, ce bloc disparait completement.

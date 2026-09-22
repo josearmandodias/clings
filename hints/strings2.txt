@@ -1,0 +1,8 @@
+Remplace strcpy + strcat par un seul appel :
+
+  int voulu = snprintf(dst, taille, "Bonjour %s", nom);
+
+snprintf n'ecrit jamais plus de `taille` octets, terminateur compris.
+Sa valeur de retour est la longueur qu'aurait eue le message COMPLET :
+si elle est >= taille, il y a eu troncature. C'est exactement le test
+qu'il te faut pour renvoyer 1 ou 0.

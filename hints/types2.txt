@@ -1,0 +1,4 @@
+`taille` est un size_t, c'est-a-dire un entier NON signe.
+Ton `i` est un int, signe. Les comparer force une conversion implicite.
+
+Declare i avec le meme type que ce a quoi tu le compares : size_t.

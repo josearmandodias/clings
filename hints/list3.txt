@@ -1,0 +1,9 @@
+Trois cas a traiter :
+1. index == 0 (ou liste vide) : le nouveau noeud devient la tete ; mets
+   n->suivant = tete et renvoie n.
+2. Sinon, avance jusqu'au noeud d'indice index-1 (le precedent). Attention a ne
+   pas depasser la fin : ta boucle doit s'arreter si courant->suivant == NULL.
+3. Branche : n->suivant = courant->suivant ; courant->suivant = n.
+
+Si index >= longueur, l'etape 2 t'amene naturellement au dernier noeud, donc
+l'insertion se fait en queue. N'oublie pas de renvoyer la tete (inchangee ici).

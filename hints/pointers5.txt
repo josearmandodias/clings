@@ -1,0 +1,8 @@
+`const int *tab` pointe sur le premier élément. Pour avancer d'un élément, on
+écrit `tab++` : le pointeur se décale de `sizeof(int)` octets, pas de 1.
+
+Accumule `*tab` puis fais `tab++`, `n` fois. Une boucle `for (size_t i = 0;
+i < n; i++)` convient.
+
+Cas `n == 0` : la boucle ne s'exécute pas, le total reste 0 — rien de
+particulier à faire.

@@ -1,0 +1,13 @@
+  FILE *f = fopen(chemin, "r");
+  if (f == NULL) return -1;
+
+  char buf[256];
+  int n = 0;
+  while (fgets(buf, sizeof(buf), f) != NULL) n++;
+
+  fclose(f);
+  return n;
+
+fgets renvoie NULL en fin de fichier : c'est la condition d'arret.
+N'oublie jamais fclose — un descripteur non ferme est une fuite, comme un
+malloc sans free.

@@ -1,0 +1,2 @@
+Supprime la ligne "// I AM NOT DONE" du fichier, puis sauvegarde.
+C'est tout. Le mode watch relancera l'exercice tout seul.

@@ -1,0 +1,10 @@
+Lance la compilation et lis le premier message : il donne un numero de ligne.
+Corrige cette erreur, sauvegarde, recompile, puis repete.
+
+Les trois problemes :
+  1. une declaration se termine par un point-virgule : `int b = 23;`
+  2. `somme` est utilisee sans jamais avoir ete declaree. Declare-la sur la
+     meme ligne que son calcul :
+       int somme = a + b;
+  3. `moyenne` est un `double`, mais `printf` la lit avec `%d` (pour un int).
+     Un double s'affiche avec `%f`, ou `%.1f` pour une seule decimale.

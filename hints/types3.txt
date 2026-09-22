@@ -1,0 +1,5 @@
+`somme / n` avec deux int fait une division ENTIERE. Le resultat, deja
+tronque, est ensuite converti en double : trop tard.
+
+Convertis un operande avant l'operation : (double)somme / n
+Il suffit d'un seul : l'autre est promu automatiquement.

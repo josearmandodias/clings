@@ -1,0 +1,12 @@
+# artefacts de build et de test
+.build/
+*.o
+clings_*.tmp
+
+# cache local de clangd
+.cache/
+compile_commands.json
+
+# copies locales
+.templates/
+.user-work-backup/

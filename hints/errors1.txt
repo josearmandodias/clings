@@ -1,0 +1,12 @@
+  char *fin;
+  errno = 0;
+  long v = strtol(s, &fin, 10);
+
+Trois echecs a distinguer :
+  - fin == s          : aucun chiffre n'a ete lu (chaine vide ou "abc")
+  - *fin != '\0'      : il reste des caracteres apres le nombre ("12abc")
+  - errno == ERANGE   : le nombre ne tient pas dans un long
+
+Pourquoi errno = 0 avant l'appel ? Parce que strtol peut legitimement
+renvoyer 0, et parce que errno n'est jamais remis a zero tout seul : il
+pourrait contenir l'erreur d'un appel precedent.

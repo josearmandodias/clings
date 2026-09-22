@@ -1,0 +1,16 @@
+calloc(n, sizeof(int)) a deux avantages sur malloc :
+  - il met chaque octet a zero ;
+  - il verifie lui-meme le debordement de la multiplication.
+
+Mais il faut d'abord ecarter deux cas :
+
+  if (n == 0)
+      return NULL;
+  if (n > SIZE_MAX / sizeof(int))   /* n * sizeof(int) deborderait */
+      return NULL;
+
+Puis : return calloc(n, sizeof(int));
+
+N'oublie pas <stdint.h> pour SIZE_MAX. La division, elle, ne peut pas
+deborder : c'est pour cela qu'on teste `n > SIZE_MAX / sizeof(int)` plutot
+que de laisser la multiplication se produire.

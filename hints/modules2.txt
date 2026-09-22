@@ -1,0 +1,18 @@
+Le fichier a corriger est exercises/07_modules/modules2_table.h, pas les .c.
+
+Il lui manque, comme a modules1_math.h :
+
+  1. la garde d'inclusion, qui empeche le contenu d'etre insere deux fois si
+     deux fichiers incluent ce header :
+       #ifndef MODULES2_TABLE_H
+       #define MODULES2_TABLE_H
+       ... les declarations ...
+       #endif
+
+  2. le prototype de somme_tableau, sur le modele de max_tableau :
+       int  max_tableau(const int *tab, size_t n);
+       long somme_tableau(const int *tab, size_t n);
+
+Un prototype se termine par un point-virgule : c'est une promesse faite au
+compilateur, l'implementation vit dans modules2_table.c. Ne modifie ni
+modules2.c ni modules2_table.c.

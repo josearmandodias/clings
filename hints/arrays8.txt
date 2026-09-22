@@ -1,0 +1,6 @@
+Trois boucles imbriquees : i sur les lignes de a, j sur les colonnes de b,
+et k sur la dimension commune (3). Pour chaque (i, j), accumule :
+  somme += a[i][k] * b[k][j];
+puis ecris c[i][j] = somme.
+
+Pense a repartir d'une somme a 0 pour chaque case.

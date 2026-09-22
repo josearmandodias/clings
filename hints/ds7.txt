@@ -1,0 +1,10 @@
+inserer : recursif. Si racine == NULL, alloue un noeud (valeur v, deux fils NULL)
+et renvoie-le. Sinon compare v a racine->valeur : plus petit -> descends a
+gauche, plus grand -> descends a droite, et affecte le resultat au bon fils.
+Ignore les doublons. Renvoie racine.
+
+contient : compare la valeur, puis descend a gauche ou a droite ; si tu tombes
+sur NULL, la valeur est absente (une boucle suffit).
+
+liberer_arbre : POSTORDRE. Libere d'abord le fils gauche, puis le droit, puis le
+noeud. Liberer le noeud avant ses fils perdrait l'acces aux sous-arbres.
