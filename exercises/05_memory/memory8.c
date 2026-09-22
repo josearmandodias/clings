@@ -14,9 +14,10 @@
 int *agrandir(int *tab, size_t ancien, size_t nouveau)
 {
     /* TODO: agrandir reellement le bloc, sans le perdre en cas d'echec. */
+    (void)tab;
     (void)ancien;
     (void)nouveau;
-    return tab;
+    return NULL;
 }
 
 int main(void)
