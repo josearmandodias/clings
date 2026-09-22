@@ -2,6 +2,8 @@
 
 [![check](https://github.com/josearmandodias/clings/actions/workflows/check.yml/badge.svg)](https://github.com/josearmandodias/clings/actions/workflows/check.yml)
 
+**Français** · [English](README.en.md)
+
 Petits exercices pour apprendre le C, dans l'esprit de [rustlings](https://rustlings.rust-lang.org/).
 
 109 exercices, chacun dans un fichier `.c` cassé ou incomplet. Tu le répares,
@@ -84,14 +86,22 @@ L'ordre est celui de `exercises/order.txt`. Ajouter un exercice : créer le
 
 ## Fiches
 
-Des fiches de référence, à consulter quand un thème te résiste :
+Chaque section du cours a sa fiche : un aide-mémoire **et** une carte mentale,
+en français et en anglais. Index complet dans [`fiches/`](fiches/README.md).
 
-- [`pointeurs-c.md`](pointeurs-c.md) — opérateurs, `const`, arithmétique,
-  pointeurs de fonction, `void *`, propriété
-- [`structures-c.md`](structures-c.md) — listes chaînées, pile, file, arbre
-  binaire de recherche, table de hachage
-- [`bitwise-c.md`](bitwise-c.md) — représentation, décalages, masques,
-  popcount, boutisme, pièges
+- [`intro-c.md`](fiches/fr/intro-c.md) — compiler, exécuter, lire les erreurs
+- [`types-c.md`](fiches/fr/types-c.md) — entiers, conversions, flottants, `printf`
+- [`pointeurs-c.md`](fiches/fr/pointeurs-c.md) — opérateurs, `const`, arithmétique, pointeurs de fonction, `void *`
+- [`arrays-c.md`](fiches/fr/arrays-c.md) — décroissance, bornes, tableaux 2D, recherche binaire
+- [`strings-c.md`](fiches/fr/strings-c.md) — `'\0'`, écriture bornée, parcours
+- [`memoire-c.md`](fiches/fr/memoire-c.md) — pile et tas, `malloc`, propriété, fuites
+- [`structs-c.md`](fiches/fr/structs-c.md) — copie, `->`, padding, unions, `qsort`
+- [`modules-c.md`](fiches/fr/modules-c.md) — compilation séparée, headers, préprocesseur
+- [`io-c.md`](fiches/fr/io-c.md) — fichiers, texte et binaire, `errno`, `strtol`
+- [`recursion-c.md`](fiches/fr/recursion-c.md) — cas de base, pile d'appels, algorithmes
+- [`structures-c.md`](fiches/fr/structures-c.md) — listes, pile, file, arbre, hachage
+- [`bitwise-c.md`](fiches/fr/bitwise-c.md) — masques, décalages, boutisme
+- [`tri-c.md`](fiches/fr/tri-c.md) — insertion, fusion, rapide, comptage
 
 ## Écrire un exercice
 

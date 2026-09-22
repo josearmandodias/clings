@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1185 993" width="1185" height="993" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+<rect x="0" y="0" width="1185" height="993" fill="#ffffff"/>
+<path d="M 586.9 510.0 Q 586.9 307.1 586.9 59.0" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 586.9 510.0 Q 717.3 354.5 876.8 164.5" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 586.9 510.0 Q 786.7 474.8 1031.0 431.7" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 586.9 510.0 Q 762.6 611.5 977.5 735.5" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 586.9 510.0 Q 656.3 700.7 741.1 933.8" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 586.9 510.0 Q 517.5 700.7 432.6 933.8" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 586.9 510.0 Q 411.1 611.5 196.3 735.5" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 586.9 510.0 Q 387.0 474.8 142.7 431.7" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 586.9 510.0 Q 456.4 354.5 297.0 164.5" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="350.3" y="483.0" width="473.2" height="54.0" rx="27.0" fill="#1f2937" stroke="#1f2937" stroke-width="1.5"/>
+<text x="586.9" y="517.0" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">Modules, headers and the preprocessor</text>
+<rect x="499.5" y="44.0" width="174.8" height="30.0" rx="15.0" fill="#d1495b" stroke="#d1495b" stroke-width="1.5"/>
+<text x="586.9" y="63.5" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Separate compilation</text>
+<rect x="770.5" y="149.5" width="212.5" height="30.0" rx="15.0" fill="#00798c" stroke="#00798c" stroke-width="1.5"/>
+<text x="876.8" y="169.1" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Declaration vs definition</text>
+<rect x="921.0" y="416.7" width="220.0" height="30.0" rx="15.0" fill="#edae49" stroke="#edae49" stroke-width="1.5"/>
+<text x="1031.0" y="436.2" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Headers and include guards</text>
+<rect x="886.3" y="720.5" width="182.3" height="30.0" rx="15.0" fill="#2e4057" stroke="#2e4057" stroke-width="1.5"/>
+<text x="977.5" y="740.1" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">`static` and `extern`</text>
+<rect x="653.7" y="918.8" width="174.8" height="30.0" rx="15.0" fill="#6a4c93" stroke="#6a4c93" stroke-width="1.5"/>
+<text x="741.1" y="938.4" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">`#define` and macros</text>
+<rect x="322.6" y="918.8" width="220.0" height="30.0" rx="15.0" fill="#3d9970" stroke="#3d9970" stroke-width="1.5"/>
+<text x="432.6" y="938.4" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">The double evaluation trap</text>
+<rect x="59.9" y="720.5" width="272.8" height="30.0" rx="15.0" fill="#e07a5f" stroke="#e07a5f" stroke-width="1.5"/>
+<text x="196.3" y="740.1" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">`#` (stringify) and `##` (concat)</text>
+<rect x="44.0" y="416.7" width="197.4" height="30.0" rx="15.0" fill="#457b9d" stroke="#457b9d" stroke-width="1.5"/>
+<text x="142.7" y="436.2" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Conditional compilation</text>
+<rect x="239.7" y="149.5" width="114.5" height="30.0" rx="15.0" fill="#8d6a9f" stroke="#8d6a9f" stroke-width="1.5"/>
+<text x="297.0" y="169.1" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">The takeaway</text>
+</svg>

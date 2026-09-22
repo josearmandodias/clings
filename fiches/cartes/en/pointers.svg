@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 872 710" width="872" height="710" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+<rect x="0" y="0" width="872" height="710" fill="#ffffff"/>
+<path d="M 408.6 359.5 Q 408.6 224.3 408.6 59.0" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 408.6 359.5 Q 471.4 239.8 548.3 93.4" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 408.6 359.5 Q 519.9 282.7 655.9 188.8" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 408.6 359.5 Q 542.8 343.2 706.9 323.3" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 408.6 359.5 Q 535.0 407.5 689.6 466.1" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 408.6 359.5 Q 498.3 460.7 607.9 584.4" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 408.6 359.5 Q 441.0 490.8 480.5 651.3" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 408.6 359.5 Q 376.2 490.8 336.7 651.3" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 408.6 359.5 Q 318.9 460.7 209.3 584.4" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 408.6 359.5 Q 282.2 407.5 127.6 466.1" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 408.6 359.5 Q 274.4 343.2 110.3 323.3" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 408.6 359.5 Q 297.3 282.7 161.3 188.8" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 408.6 359.5 Q 345.8 239.8 269.0 93.4" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="311.2" y="332.5" width="194.8" height="54.0" rx="27.0" fill="#1f2937" stroke="#1f2937" stroke-width="1.5"/>
+<text x="408.6" y="366.5" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">Pointers in C</text>
+<rect x="332.5" y="44.0" width="152.2" height="30.0" rx="15.0" fill="#d1495b" stroke="#d1495b" stroke-width="1.5"/>
+<text x="408.6" y="63.5" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">The two operators</text>
+<rect x="457.1" y="78.4" width="182.3" height="30.0" rx="15.0" fill="#00798c" stroke="#00798c" stroke-width="1.5"/>
+<text x="548.3" y="98.0" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Reading a declaration</text>
+<rect x="576.0" y="173.8" width="159.7" height="30.0" rx="15.0" fill="#edae49" stroke="#edae49" stroke-width="1.5"/>
+<text x="655.9" y="193.3" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">const and pointers</text>
+<rect x="585.6" y="308.3" width="242.7" height="30.0" rx="15.0" fill="#2e4057" stroke="#2e4057" stroke-width="1.5"/>
+<text x="706.9" y="327.8" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Modifying a caller&#x27;s variable</text>
+<rect x="651.6" y="451.1" width="76.0" height="30.0" rx="15.0" fill="#6a4c93" stroke="#6a4c93" stroke-width="1.5"/>
+<text x="689.6" y="470.6" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">NULL</text>
+<rect x="482.8" y="569.4" width="250.2" height="30.0" rx="15.0" fill="#3d9970" stroke="#3d9970" stroke-width="1.5"/>
+<text x="607.9" y="589.0" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">The &quot;output parameter&quot; pattern</text>
+<rect x="389.3" y="636.3" width="182.3" height="30.0" rx="15.0" fill="#e07a5f" stroke="#e07a5f" stroke-width="1.5"/>
+<text x="480.5" y="655.8" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Arrays and arithmetic</text>
+<rect x="260.6" y="636.3" width="152.2" height="30.0" rx="15.0" fill="#457b9d" stroke="#457b9d" stroke-width="1.5"/>
+<text x="336.7" y="655.8" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Function pointers</text>
+<rect x="88.0" y="569.4" width="242.7" height="30.0" rx="15.0" fill="#8d6a9f" stroke="#8d6a9f" stroke-width="1.5"/>
+<text x="209.3" y="589.0" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">void *, memcpy and genericity</text>
+<rect x="44.0" y="451.1" width="167.3" height="30.0" rx="15.0" fill="#bc6c25" stroke="#bc6c25" stroke-width="1.5"/>
+<text x="127.6" y="470.6" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Who owns the memory</text>
+<rect x="45.5" y="308.3" width="129.6" height="30.0" rx="15.0" fill="#2a9d8f" stroke="#2a9d8f" stroke-width="1.5"/>
+<text x="110.3" y="327.8" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Classic faults</text>
+<rect x="104.1" y="173.8" width="114.5" height="30.0" rx="15.0" fill="#c1121f" stroke="#c1121f" stroke-width="1.5"/>
+<text x="161.3" y="193.3" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">The takeaway</text>
+<rect x="223.0" y="78.4" width="91.9" height="30.0" rx="15.0" fill="#4361ee" stroke="#4361ee" stroke-width="1.5"/>
+<text x="269.0" y="98.0" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Compiling</text>
+</svg>

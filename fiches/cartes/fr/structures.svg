@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 971 909" width="971" height="909" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+<rect x="0" y="0" width="971" height="909" fill="#ffffff"/>
+<path d="M 477.7 454.3 Q 477.7 276.4 477.7 59.0" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 477.7 454.3 Q 603.5 328.5 757.3 174.8" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 477.7 454.3 Q 655.6 454.3 873.0 454.3" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 477.7 454.3 Q 603.5 580.1 757.3 733.9" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 477.7 454.3 Q 477.7 632.2 477.7 849.7" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 477.7 454.3 Q 351.9 580.1 198.2 733.9" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 477.7 454.3 Q 299.8 454.3 82.4 454.3" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 477.7 454.3 Q 351.9 328.5 198.2 174.8" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="281.7" y="427.3" width="392.0" height="54.0" rx="27.0" fill="#1f2937" stroke="#1f2937" stroke-width="1.5"/>
+<text x="477.7" y="461.3" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">Les structures de données en C</text>
+<rect x="356.4" y="44.0" width="242.7" height="30.0" rx="15.0" fill="#d1495b" stroke="#d1495b" stroke-width="1.5"/>
+<text x="477.7" y="63.5" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Rappels : allouer et posséder</text>
+<rect x="696.3" y="159.8" width="122.0" height="30.0" rx="15.0" fill="#00798c" stroke="#00798c" stroke-width="1.5"/>
+<text x="757.3" y="179.3" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Liste chaînée</text>
+<rect x="819.6" y="439.3" width="106.9" height="30.0" rx="15.0" fill="#edae49" stroke="#edae49" stroke-width="1.5"/>
+<text x="873.0" y="458.9" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Pile (LIFO)</text>
+<rect x="703.8" y="718.9" width="106.9" height="30.0" rx="15.0" fill="#2e4057" stroke="#2e4057" stroke-width="1.5"/>
+<text x="757.3" y="738.4" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">File (FIFO)</text>
+<rect x="367.7" y="834.7" width="220.0" height="30.0" rx="15.0" fill="#6a4c93" stroke="#6a4c93" stroke-width="1.5"/>
+<text x="477.7" y="854.2" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Arbre binaire de recherche</text>
+<rect x="125.9" y="718.9" width="144.6" height="30.0" rx="15.0" fill="#3d9970" stroke="#3d9970" stroke-width="1.5"/>
+<text x="198.2" y="738.4" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Table de hachage</text>
+<rect x="44.0" y="439.3" width="76.8" height="30.0" rx="15.0" fill="#e07a5f" stroke="#e07a5f" stroke-width="1.5"/>
+<text x="82.4" y="458.9" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Choisir</text>
+<rect x="148.5" y="159.8" width="99.4" height="30.0" rx="15.0" fill="#457b9d" stroke="#457b9d" stroke-width="1.5"/>
+<text x="198.2" y="179.3" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Le réflexe</text>
+</svg>

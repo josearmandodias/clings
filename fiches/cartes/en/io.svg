@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 921 733" width="921" height="733" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+<rect x="0" y="0" width="921" height="733" fill="#ffffff"/>
+<path d="M 492.6 376.0 Q 492.6 233.4 492.6 59.0" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 492.6 376.0 Q 584.3 266.7 696.4 133.2" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 492.6 376.0 Q 633.1 351.3 804.8 321.0" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 492.6 376.0 Q 616.2 447.4 767.2 534.5" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 492.6 376.0 Q 541.4 510.1 601.1 673.9" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 492.6 376.0 Q 443.8 510.1 384.2 673.9" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 492.6 376.0 Q 369.1 447.4 218.1 534.5" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 492.6 376.0 Q 352.1 351.3 180.4 321.0" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 492.6 376.0 Q 400.9 266.7 288.8 133.2" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="412.6" y="349.0" width="160.0" height="54.0" rx="27.0" fill="#1f2937" stroke="#1f2937" stroke-width="1.5"/>
+<text x="492.6" y="383.0" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">Files in C</text>
+<rect x="409.0" y="44.0" width="167.3" height="30.0" rx="15.0" fill="#d1495b" stroke="#d1495b" stroke-width="1.5"/>
+<text x="492.6" y="63.5" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Opening and closing</text>
+<rect x="590.2" y="118.2" width="212.5" height="30.0" rx="15.0" fill="#00798c" stroke="#00798c" stroke-width="1.5"/>
+<text x="696.4" y="137.7" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Reading text with `fgets`</text>
+<rect x="747.6" y="306.0" width="114.5" height="30.0" rx="15.0" fill="#edae49" stroke="#edae49" stroke-width="1.5"/>
+<text x="804.8" y="325.5" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Writing text</text>
+<rect x="657.2" y="519.5" width="220.0" height="30.0" rx="15.0" fill="#2e4057" stroke="#2e4057" stroke-width="1.5"/>
+<text x="767.2" y="539.1" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Reading and writing binary</text>
+<rect x="442.0" y="658.9" width="318.1" height="30.0" rx="15.0" fill="#6a4c93" stroke="#6a4c93" stroke-width="1.5"/>
+<text x="601.1" y="678.5" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">`fseek`, `ftell` and the size of a file</text>
+<rect x="289.3" y="658.9" width="189.9" height="30.0" rx="15.0" fill="#3d9970" stroke="#3d9970" stroke-width="1.5"/>
+<text x="384.2" y="678.5" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">End of file and errors</text>
+<rect x="123.1" y="519.5" width="189.9" height="30.0" rx="15.0" fill="#e07a5f" stroke="#e07a5f" stroke-width="1.5"/>
+<text x="218.1" y="539.1" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">C-style error handling</text>
+<rect x="44.0" y="306.0" width="272.8" height="30.0" rx="15.0" fill="#457b9d" stroke="#457b9d" stroke-width="1.5"/>
+<text x="180.4" y="325.5" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">`strtol`: converting with control</text>
+<rect x="231.6" y="118.2" width="114.5" height="30.0" rx="15.0" fill="#8d6a9f" stroke="#8d6a9f" stroke-width="1.5"/>
+<text x="288.8" y="137.7" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">The takeaway</text>
+</svg>

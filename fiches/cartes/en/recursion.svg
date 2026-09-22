@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 795 678" width="795" height="678" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+<rect x="0" y="0" width="795" height="678" fill="#ffffff"/>
+<path d="M 401.4 338.9 Q 401.4 213.0 401.4 59.0" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 401.4 338.9 Q 475.4 237.0 565.9 112.5" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 401.4 338.9 Q 521.2 300.0 667.6 252.4" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 401.4 338.9 Q 521.2 377.8 667.6 425.4" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 401.4 338.9 Q 475.4 440.8 565.9 565.4" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 401.4 338.9 Q 401.4 464.9 401.4 618.8" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 401.4 338.9 Q 327.3 440.8 236.9 565.4" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 401.4 338.9 Q 281.6 377.8 135.2 425.4" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 401.4 338.9 Q 281.6 300.0 135.2 252.4" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 401.4 338.9 Q 327.3 237.0 236.9 112.5" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="298.2" y="311.9" width="206.4" height="54.0" rx="27.0" fill="#1f2937" stroke="#1f2937" stroke-width="1.5"/>
+<text x="401.4" y="345.9" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">Recursion in C</text>
+<rect x="336.6" y="44.0" width="129.6" height="30.0" rx="15.0" fill="#d1495b" stroke="#d1495b" stroke-width="1.5"/>
+<text x="401.4" y="63.5" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">The two pieces</text>
+<rect x="501.1" y="97.5" width="129.6" height="30.0" rx="15.0" fill="#00798c" stroke="#00798c" stroke-width="1.5"/>
+<text x="565.9" y="117.0" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">The call stack</text>
+<rect x="584.0" y="237.4" width="167.3" height="30.0" rx="15.0" fill="#edae49" stroke="#edae49" stroke-width="1.5"/>
+<text x="667.6" y="257.0" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Fast exponentiation</text>
+<rect x="610.4" y="410.4" width="114.5" height="30.0" rx="15.0" fill="#2e4057" stroke="#2e4057" stroke-width="1.5"/>
+<text x="667.6" y="430.0" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Euclid&#x27;s GCD</text>
+<rect x="497.4" y="550.4" width="137.1" height="30.0" rx="15.0" fill="#6a4c93" stroke="#6a4c93" stroke-width="1.5"/>
+<text x="565.9" y="569.9" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Towers of Hanoi</text>
+<rect x="340.4" y="603.8" width="122.0" height="30.0" rx="15.0" fill="#3d9970" stroke="#3d9970" stroke-width="1.5"/>
+<text x="401.4" y="623.4" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Sum of digits</text>
+<rect x="138.1" y="550.4" width="197.4" height="30.0" rx="15.0" fill="#e07a5f" stroke="#e07a5f" stroke-width="1.5"/>
+<text x="236.9" y="569.9" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Recursive binary search</text>
+<rect x="47.8" y="410.4" width="174.8" height="30.0" rx="15.0" fill="#457b9d" stroke="#457b9d" stroke-width="1.5"/>
+<text x="135.2" y="430.0" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Recursive palindrome</text>
+<rect x="44.0" y="237.4" width="182.3" height="30.0" rx="15.0" fill="#8d6a9f" stroke="#8d6a9f" stroke-width="1.5"/>
+<text x="135.2" y="257.0" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Depth and memoization</text>
+<rect x="179.6" y="97.5" width="114.5" height="30.0" rx="15.0" fill="#bc6c25" stroke="#bc6c25" stroke-width="1.5"/>
+<text x="236.9" y="117.0" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">The takeaway</text>
+</svg>
