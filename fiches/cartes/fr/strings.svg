@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1038 882" width="1038" height="882" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+<rect x="0" y="0" width="1038" height="882" fill="#ffffff"/>
+<path d="M 475.7 441.0 Q 475.7 269.1 475.7 59.0" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 475.7 441.0 Q 561.6 292.1 666.7 110.2" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 475.7 441.0 Q 624.6 355.0 806.5 250.0" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 475.7 441.0 Q 647.6 441.0 857.7 441.0" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 475.7 441.0 Q 624.6 526.9 806.5 632.0" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 475.7 441.0 Q 561.6 589.9 666.7 771.8" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 475.7 441.0 Q 475.7 612.9 475.7 823.0" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 475.7 441.0 Q 389.7 589.9 284.7 771.8" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 475.7 441.0 Q 326.8 526.9 144.9 632.0" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 475.7 441.0 Q 303.8 441.0 93.7 441.0" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 475.7 441.0 Q 326.8 355.0 144.9 250.0" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 475.7 441.0 Q 389.7 292.1 284.7 110.2" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="360.9" y="414.0" width="229.6" height="54.0" rx="27.0" fill="#1f2937" stroke="#1f2937" stroke-width="1.5"/>
+<text x="475.7" y="448.0" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">Les chaînes en C</text>
+<rect x="384.5" y="44.0" width="182.3" height="30.0" rx="15.0" fill="#d1495b" stroke="#d1495b" stroke-width="1.5"/>
+<text x="475.7" y="63.5" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">`char` et l&#x27;octet nul</text>
+<rect x="477.5" y="95.2" width="378.4" height="30.0" rx="15.0" fill="#00798c" stroke="#00798c" stroke-width="1.5"/>
+<text x="666.7" y="114.7" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Littéral en lecture seule ou tableau modifiable</text>
+<rect x="696.5" y="235.0" width="220.0" height="30.0" rx="15.0" fill="#edae49" stroke="#edae49" stroke-width="1.5"/>
+<text x="806.5" y="254.5" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Les fonctions essentielles</text>
+<rect x="721.3" y="426.0" width="272.8" height="30.0" rx="15.0" fill="#2e4057" stroke="#2e4057" stroke-width="1.5"/>
+<text x="857.7" y="445.5" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">`snprintf` : écrire sans déborder</text>
+<rect x="673.9" y="617.0" width="265.3" height="30.0" rx="15.0" fill="#6a4c93" stroke="#6a4c93" stroke-width="1.5"/>
+<text x="806.5" y="636.5" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">`strlcat` et `strlcpy` (mention)</text>
+<rect x="496.3" y="756.8" width="340.7" height="30.0" rx="15.0" fill="#3d9970" stroke="#3d9970" stroke-width="1.5"/>
+<text x="666.7" y="776.4" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Minuscules, majuscules : attention au type</text>
+<rect x="388.3" y="808.0" width="174.8" height="30.0" rx="15.0" fill="#e07a5f" stroke="#e07a5f" stroke-width="1.5"/>
+<text x="475.7" y="827.5" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Parcourir une chaîne</text>
+<rect x="189.8" y="756.8" width="189.9" height="30.0" rx="15.0" fill="#457b9d" stroke="#457b9d" stroke-width="1.5"/>
+<text x="284.7" y="776.4" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Réimplémenter `strcpy`</text>
+<rect x="61.2" y="617.0" width="167.3" height="30.0" rx="15.0" fill="#8d6a9f" stroke="#8d6a9f" stroke-width="1.5"/>
+<text x="144.9" y="636.5" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Inverser une chaîne</text>
+<rect x="44.0" y="426.0" width="99.4" height="30.0" rx="15.0" fill="#bc6c25" stroke="#bc6c25" stroke-width="1.5"/>
+<text x="93.7" y="445.5" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Palindrome</text>
+<rect x="72.6" y="235.0" width="144.6" height="30.0" rx="15.0" fill="#2a9d8f" stroke="#2a9d8f" stroke-width="1.5"/>
+<text x="144.9" y="254.5" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Compter les mots</text>
+<rect x="235.0" y="95.2" width="99.4" height="30.0" rx="15.0" fill="#c1121f" stroke="#c1121f" stroke-width="1.5"/>
+<text x="284.7" y="114.7" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Le réflexe</text>
+</svg>

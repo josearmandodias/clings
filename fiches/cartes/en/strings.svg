@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 954 775" width="954" height="775" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+<rect x="0" y="0" width="954" height="775" fill="#ffffff"/>
+<path d="M 422.3 387.6 Q 422.3 239.7 422.3 59.0" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 422.3 387.6 Q 496.3 259.6 586.6 103.0" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 422.3 387.6 Q 550.4 313.7 706.9 223.3" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 422.3 387.6 Q 570.2 387.6 751.0 387.6" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 422.3 387.6 Q 550.4 461.6 706.9 551.9" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 422.3 387.6 Q 496.3 515.7 586.6 672.2" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 422.3 387.6 Q 422.3 535.5 422.3 716.3" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 422.3 387.6 Q 348.4 515.7 258.0 672.2" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 422.3 387.6 Q 294.3 461.6 137.7 551.9" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 422.3 387.6 Q 274.4 387.6 93.7 387.6" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 422.3 387.6 Q 294.3 313.7 137.7 223.3" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 422.3 387.6 Q 348.4 259.6 258.0 103.0" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="330.7" y="360.6" width="183.2" height="54.0" rx="27.0" fill="#1f2937" stroke="#1f2937" stroke-width="1.5"/>
+<text x="422.3" y="394.6" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">Strings in C</text>
+<rect x="319.9" y="44.0" width="205.0" height="30.0" rx="15.0" fill="#d1495b" stroke="#d1495b" stroke-width="1.5"/>
+<text x="422.3" y="63.5" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">`char` and the null byte</text>
+<rect x="435.2" y="88.0" width="303.0" height="30.0" rx="15.0" fill="#00798c" stroke="#00798c" stroke-width="1.5"/>
+<text x="586.6" y="107.6" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Read-only literal or modifiable array</text>
+<rect x="608.2" y="208.3" width="197.4" height="30.0" rx="15.0" fill="#edae49" stroke="#edae49" stroke-width="1.5"/>
+<text x="706.9" y="227.9" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">The essential functions</text>
+<rect x="591.9" y="372.6" width="318.1" height="30.0" rx="15.0" fill="#2e4057" stroke="#2e4057" stroke-width="1.5"/>
+<text x="751.0" y="392.2" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">`snprintf`: writing without overflowing</text>
+<rect x="570.5" y="536.9" width="272.8" height="30.0" rx="15.0" fill="#6a4c93" stroke="#6a4c93" stroke-width="1.5"/>
+<text x="706.9" y="556.5" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">`strlcat` and `strlcpy` (mention)</text>
+<rect x="438.9" y="657.2" width="295.4" height="30.0" rx="15.0" fill="#3d9970" stroke="#3d9970" stroke-width="1.5"/>
+<text x="586.6" y="676.8" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Lowercase, uppercase: watch the type</text>
+<rect x="338.7" y="701.3" width="167.3" height="30.0" rx="15.0" fill="#e07a5f" stroke="#e07a5f" stroke-width="1.5"/>
+<text x="422.3" y="720.8" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Traversing a string</text>
+<rect x="159.3" y="657.2" width="197.4" height="30.0" rx="15.0" fill="#457b9d" stroke="#457b9d" stroke-width="1.5"/>
+<text x="258.0" y="676.8" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Reimplementing `strcpy`</text>
+<rect x="57.9" y="536.9" width="159.7" height="30.0" rx="15.0" fill="#8d6a9f" stroke="#8d6a9f" stroke-width="1.5"/>
+<text x="137.7" y="556.5" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Reversing a string</text>
+<rect x="44.0" y="372.6" width="99.4" height="30.0" rx="15.0" fill="#bc6c25" stroke="#bc6c25" stroke-width="1.5"/>
+<text x="93.7" y="392.2" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Palindrome</text>
+<rect x="72.9" y="208.3" width="129.6" height="30.0" rx="15.0" fill="#2a9d8f" stroke="#2a9d8f" stroke-width="1.5"/>
+<text x="137.7" y="227.9" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Counting words</text>
+<rect x="200.8" y="88.0" width="114.5" height="30.0" rx="15.0" fill="#c1121f" stroke="#c1121f" stroke-width="1.5"/>
+<text x="258.0" y="107.6" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">The takeaway</text>
+</svg>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 806 673" width="806" height="673" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+<rect x="0" y="0" width="806" height="673" fill="#ffffff"/>
+<path d="M 402.9 336.6 Q 402.9 211.7 402.9 59.0" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 402.9 336.6 Q 476.4 235.5 566.1 112.0" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 402.9 336.6 Q 521.7 298.0 666.9 250.8" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 402.9 336.6 Q 521.7 375.2 666.9 422.4" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 402.9 336.6 Q 476.4 437.6 566.1 561.2" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 402.9 336.6 Q 402.9 461.5 402.9 614.2" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 402.9 336.6 Q 329.5 437.6 239.8 561.2" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 402.9 336.6 Q 284.1 375.2 138.9 422.4" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 402.9 336.6 Q 284.1 298.0 138.9 250.8" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 402.9 336.6 Q 329.5 235.5 239.8 112.0" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="317.1" y="309.6" width="171.6" height="54.0" rx="27.0" fill="#1f2937" stroke="#1f2937" stroke-width="1.5"/>
+<text x="402.9" y="343.6" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">Arrays in C</text>
+<rect x="292.9" y="44.0" width="220.0" height="30.0" rx="15.0" fill="#d1495b" stroke="#d1495b" stroke-width="1.5"/>
+<text x="402.9" y="63.5" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Declaring and initializing</text>
+<rect x="486.2" y="97.0" width="159.7" height="30.0" rx="15.0" fill="#00798c" stroke="#00798c" stroke-width="1.5"/>
+<text x="566.1" y="116.6" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">`sizeof` and decay</text>
+<rect x="628.9" y="235.8" width="76.0" height="30.0" rx="15.0" fill="#edae49" stroke="#edae49" stroke-width="1.5"/>
+<text x="666.9" y="255.4" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Bounds</text>
+<rect x="572.0" y="407.4" width="189.9" height="30.0" rx="15.0" fill="#2e4057" stroke="#2e4057" stroke-width="1.5"/>
+<text x="666.9" y="426.9" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Two-dimensional arrays</text>
+<rect x="452.3" y="546.2" width="227.6" height="30.0" rx="15.0" fill="#6a4c93" stroke="#6a4c93" stroke-width="1.5"/>
+<text x="566.1" y="565.7" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Traversal and first maximum</text>
+<rect x="323.1" y="599.2" width="159.7" height="30.0" rx="15.0" fill="#3d9970" stroke="#3d9970" stroke-width="1.5"/>
+<text x="402.9" y="618.7" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Reversing in place</text>
+<rect x="178.8" y="546.2" width="122.0" height="30.0" rx="15.0" fill="#e07a5f" stroke="#e07a5f" stroke-width="1.5"/>
+<text x="239.8" y="565.7" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Left rotation</text>
+<rect x="77.9" y="407.4" width="122.0" height="30.0" rx="15.0" fill="#457b9d" stroke="#457b9d" stroke-width="1.5"/>
+<text x="138.9" y="426.9" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">Binary search</text>
+<rect x="44.0" y="235.8" width="189.9" height="30.0" rx="15.0" fill="#8d6a9f" stroke="#8d6a9f" stroke-width="1.5"/>
+<text x="138.9" y="255.4" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">`memcpy` and `memmove`</text>
+<rect x="182.5" y="97.0" width="114.5" height="30.0" rx="15.0" fill="#bc6c25" stroke="#bc6c25" stroke-width="1.5"/>
+<text x="239.8" y="116.6" text-anchor="middle" font-size="13" font-weight="500" fill="#ffffff">The takeaway</text>
+</svg>

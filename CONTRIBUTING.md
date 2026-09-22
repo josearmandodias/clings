@@ -1,5 +1,7 @@
 # Contribuer à clings
 
+**Français** · [English](CONTRIBUTING.en.md)
+
 Merci de t'y intéresser ! Ce dépôt est un cours d'exercices de C : chaque
 exercice est un petit programme cassé que l'apprenant répare. Toute la valeur
 du cours tient à une règle simple, et le reste en découle :
