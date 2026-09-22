@@ -8,6 +8,8 @@ tu sauvegardes, ça se relance tout seul.
 ## Démarrer
 
 ```sh
+git clone https://github.com/josearmandodias/clings.git
+cd clings
 ./clings
 ```
 
