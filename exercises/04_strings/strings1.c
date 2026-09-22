@@ -20,6 +20,7 @@ int main(void)
     mot[2] = 'i';
 
     // ---------------------------- NE TOUCHE PAS -----------------------------
+    CHECK(sizeof mot >= sizeof("oui"));   /* de la place pour le '\0' */
     CHECK(strlen(mot) == 3);
     CHECK(strcmp(mot, "oui") == 0);
     CHECK(mot[3] == '\0');        /* le terminateur est bien au 4e octet */
