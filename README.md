@@ -1,5 +1,7 @@
 # clings
 
+[![check](https://github.com/josearmandodias/clings/actions/workflows/check.yml/badge.svg)](https://github.com/josearmandodias/clings/actions/workflows/check.yml)
+
 Petits exercices pour apprendre le C, dans l'esprit de [rustlings](https://rustlings.rust-lang.org/).
 
 109 exercices, chacun dans un fichier `.c` cassé ou incomplet. Tu le répares,

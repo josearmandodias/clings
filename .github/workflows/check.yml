@@ -1,0 +1,38 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    name: ${{ matrix.os }} / ${{ matrix.cc }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            cc: gcc
+          - os: macos-latest
+            cc: clang
+    env:
+      CC: ${{ matrix.cc }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Versions des outils
+        run: |
+          $CC --version | head -1
+          bash --version | head -1
+
+      - name: Rend les scripts executables
+        run: chmod +x clings dev/check.sh
+
+      - name: Genere les templates (dossier ignore par git)
+        run: ./clings help >/dev/null
+
+      - name: Verifie les 109 exercices
+        run: ./dev/check.sh
