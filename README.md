@@ -4,10 +4,13 @@
 
 **Français** · [English](README.en.md)
 
-Petits exercices pour apprendre le C, dans l'esprit de [rustlings](https://rustlings.rust-lang.org/).
+> rustlings, mais pour le C.
 
-109 exercices, chacun dans un fichier `.c` cassé ou incomplet. Tu le répares,
-tu sauvegardes, ça se relance tout seul.
+clings est un ensemble d'exercices de C. Chaque exercice est un fichier `.c`
+cassé ou incomplet : soit il ne compile pas, soit ses tests échouent. Il faut le
+réparer.
+
+109 exercices, répartis en 14 sections.
 
 ## Démarrer
 
@@ -17,26 +20,33 @@ cd clings
 ./clings
 ```
 
-C'est tout. Pas de dépendance : bash et un compilateur C (`clang` sur macOS,
-`gcc` sur Linux). Le mode watch affiche l'exercice courant, le recompile à
-chaque sauvegarde et passe au suivant quand il est validé.
+`./clings` lance le mode watch : l'exercice courant s'affiche, est recompilé à
+chaque sauvegarde, et le suivant s'ouvre quand il est validé.
 
-Un exercice est terminé quand il compile, que ses tests passent, **et** que tu
-as retiré le commentaire `// I AM NOT DONE` en tête de fichier.
+Prérequis : bash et un compilateur C (`clang` ou `gcc`). Aucune autre
+dépendance.
+
+## Valider un exercice
+
+Un exercice est terminé quand :
+
+1. le fichier compile sans warning ;
+2. ses tests passent ;
+3. la ligne `// I AM NOT DONE` a été retirée.
 
 ## Commandes
 
 | Commande | Effet |
 |---|---|
-| `./clings` | mode watch (le mode normal) |
-| `./clings run <nom>` | lance un exercice précis |
-| `./clings list` | état de tous les exercices |
-| `./clings hint <nom>` | indice |
-| `./clings solution <nom>` | une solution possible |
-| `./clings reset <nom>` | restaure l'énoncé d'origine (fichier et annexes) |
-| `./clings verify` | vérifie tout |
+| `./clings` | mode watch |
+| `./clings run <nom>` | exécute un exercice |
+| `./clings list` | liste les exercices et leur état |
+| `./clings hint <nom>` | affiche l'indice |
+| `./clings solution <nom>` | affiche une solution |
+| `./clings reset <nom>` | restaure l'énoncé d'origine |
+| `./clings verify` | exécute tous les exercices |
 
-## Ce qui tourne sous le capot
+## Compilation
 
 Chaque fichier est compilé avec :
 
@@ -45,107 +55,46 @@ Chaque fichier est compilé avec :
 -fsanitize=address,undefined
 ```
 
-`-Werror` transforme chaque avertissement en erreur. C'est volontaire : en C,
-un warning est presque toujours un bug qui attend son heure.
+`-Werror` transforme chaque warning en erreur. Les sanitizers sont détectés au
+démarrage ; s'ils ne sont pas disponibles, la compilation se fait sans eux.
 
-AddressSanitizer et UndefinedBehaviorSanitizer sont la vraie raison d'être de
-ce dépôt. Sans eux, un dépassement de tableau produit un `Segmentation fault`
-muet, ou pire, rien du tout. Avec eux, tu obtiens le fichier, la ligne, la
-nature exacte de l'erreur et la pile d'appels. C'est ce qui remplace, tant bien
-que mal, les messages du compilateur Rust.
+`include/clings.h` fournit le harnais des tests :
 
-Les sanitizers sont détectés automatiquement ; si ton compilateur ne les
-supporte pas, les exercices tournent quand même.
+- `CHECK(cond)` — échoue avec le fichier et la ligne ;
+- `OK("message")` — affiche une ligne de succès ;
+- `CHECK_NO_LEAK()` — compare les appels à `malloc` et `free`
+  (nécessite `#define CLINGS_TRACK_ALLOC`).
 
-Pour les fuites mémoire, `clings.h` compte les appels à `malloc`/`free` et
-`CHECK_NO_LEAK()` échoue s'il reste des blocs. Ce compteur maison sert surtout
-sur macOS, où LeakSanitizer n'existe pas.
+## Sections
 
-## Progression
+`00_intro` · `01_types` · `02_pointers` · `03_arrays` · `04_strings` ·
+`05_memory` · `06_structs` · `07_modules` · `08_io` · `09_recursion` ·
+`10_datastructures` · `11_bitwise` · `12_tri` · `13_linked_lists`
 
-| Section | Contenu |
-|---|---|
-| `00_intro` | prise en main, lire une erreur de compilation |
-| `01_types` | formats `printf`, signé/non signé, division entière, débordement, flottants, `enum` |
-| `02_pointers` | adresse et déréférencement, passage par adresse, paramètres de sortie, `const`, arithmétique, pointeurs de fonction, `void *` |
-| `03_arrays` | array decay, dépassement de borne, tableaux 2D, rotation, recherche binaire, `memmove` |
-| `04_strings` | l'octet nul, écriture bornée, réécrire `strlen`/`strcpy`/`strcmp`/`strchr`, compter les mots, palindrome |
-| `05_memory` | pile vs tas, fuites, use-after-free, double free, `calloc`, matrices dynamiques, propriété, copie profonde |
-| `06_structs` | copie, pointeurs et `->`, `qsort`, structures imbriquées, unions, padding, pointeurs de fonction |
-| `07_modules` | compilation séparée, headers, gardes d'inclusion, préprocesseur (`#`, `##`, `#if`) |
-| `08_io` | lecture et écriture de fichiers, binaire, `errno`, `strtol` |
-| `09_recursion` | factorielle, puissance rapide, pgcd, Hanoï, somme des chiffres, recherche binaire, palindrome |
-| `10_datastructures` | pile, file circulaire, listes chaînées, arbre binaire de recherche, table de hachage |
-| `11_bitwise` | manipuler les bits, masques et drapeaux, popcount, binaire, boutisme, champs de bits |
-| `12_tri` | tris par insertion, fusion, rapide et comptage |
-| `13_linked_lists` | recherche et k-ième, insertion à l'index, suppression, inversion récursive, fusion de listes triées, milieu et cycle de Floyd, doublons, copie profonde |
-
-L'ordre est celui de `exercises/order.txt`. Ajouter un exercice : créer le
-`.c`, l'ajouter à ce fichier, et déposer un `hints/<nom>.txt` et une
-`solutions/<nom>.c`.
-
-## Fiches
-
-Chaque section du cours a sa fiche : un aide-mémoire **et** une carte mentale,
-en français et en anglais. Index complet dans [`fiches/`](fiches/README.md).
-
-- [`intro-c.md`](fiches/fr/intro-c.md) — compiler, exécuter, lire les erreurs
-- [`types-c.md`](fiches/fr/types-c.md) — entiers, conversions, flottants, `printf`
-- [`pointeurs-c.md`](fiches/fr/pointeurs-c.md) — opérateurs, `const`, arithmétique, pointeurs de fonction, `void *`
-- [`arrays-c.md`](fiches/fr/arrays-c.md) — décroissance, bornes, tableaux 2D, recherche binaire
-- [`strings-c.md`](fiches/fr/strings-c.md) — `'\0'`, écriture bornée, parcours
-- [`memoire-c.md`](fiches/fr/memoire-c.md) — pile et tas, `malloc`, propriété, fuites
-- [`structs-c.md`](fiches/fr/structs-c.md) — copie, `->`, padding, unions, `qsort`
-- [`modules-c.md`](fiches/fr/modules-c.md) — compilation séparée, headers, préprocesseur
-- [`io-c.md`](fiches/fr/io-c.md) — fichiers, texte et binaire, `errno`, `strtol`
-- [`recursion-c.md`](fiches/fr/recursion-c.md) — cas de base, pile d'appels, algorithmes
-- [`structures-c.md`](fiches/fr/structures-c.md) — listes, pile, file, arbre, hachage
-- [`bitwise-c.md`](fiches/fr/bitwise-c.md) — masques, décalages, boutisme
-- [`tri-c.md`](fiches/fr/tri-c.md) — insertion, fusion, rapide, comptage
+Chaque section a une fiche (aide-mémoire et carte mentale, en français et en
+anglais) : [`fiches/`](fiches/README.md).
 
 ## Écrire un exercice
 
-Un exercice est un programme autonome. Il inclut `clings.h`, qui fournit :
+Un exercice est un programme autonome qui inclut `clings.h`. Les tests sont sous
+la ligne `NE TOUCHE PAS` et ne sont pas modifiés par l'apprenant.
 
-- `CHECK(cond)` — échoue proprement avec le fichier et la ligne
-- `OK("message")` — affiche une ligne de succès
-- `CHECK_NO_LEAK()` — vérifie qu'aucun bloc n'est resté alloué
-  (nécessite `#define CLINGS_TRACK_ALLOC` avant l'inclusion)
+Pour en ajouter un : créer `exercises/<section>/<nom>.c`, l'ajouter à
+`exercises/order.txt`, puis créer `hints/<nom>.txt` et `solutions/<nom>.c`.
 
-Le bloc sous la ligne `NE TOUCHE PAS` contient les tests : c'est ce qui
-définit l'exercice, l'apprenant ne le modifie pas.
+## Développement
 
-Au premier lancement, `clings` recopie les énoncés dans `.templates/` (ignoré
-par git) ; c'est ce que `reset` restaure. Les `.c` **et** les `.h` sont
-capturés, car certains exercices (`07_modules`) demandent de corriger un
-header.
-
-## Développer
-
-`dev/check.sh` valide l'intégrité du cours :
+`dev/check.sh` vérifie que chaque solution compile et passe, et que chaque
+énoncé échoue :
 
 ```sh
-./dev/check.sh          # les 109 exercices
-./dev/check.sh arrays7  # un seul
+./dev/check.sh
+./dev/check.sh arrays7
 ```
-
-Pour chaque exercice il vérifie que l'énoncé, l'indice, la solution et la copie
-vierge existent, que **la solution compile et passe**, et que **l'énoncé,
-marqueur retiré, échoue** (sinon l'exercice serait déjà résolu). Lance-le après
-avoir ajouté ou modifié un exercice.
 
 ## Contribuer
 
-Les contributions sont bienvenues : un nouvel exercice, un énoncé ambigu à
-corriger, un meilleur indice, une fiche, ou une amélioration du harnais.
-
-- Ouvre une *issue* pour signaler un exercice peu clair ou un bug.
-- Ouvre une *pull request* pour proposer un changement : la CI lance
-  `dev/check.sh` sur macOS et Ubuntu et te dit si tout tient.
-- Le pas-à-pas (anatomie d'un exercice, règles d'or, piège des templates,
-  style) est dans [`CONTRIBUTING.md`](CONTRIBUTING.md).
-
-Un énoncé ambigu ou un indice trompeur est un vrai bug : n'hésite pas.
+Voir [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Licence
 
